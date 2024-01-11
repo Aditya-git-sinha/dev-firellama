@@ -1,59 +1,153 @@
 .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     height: 60px;
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #333;
-    display: flex;
-    /* To align children inline */
-    justify-content: space-between;
-    /* To separate logo and nav items */
-    align-items: center;
-    /* To center items vertically */
-    color: white;
+    background-color: transparent;
+    /* Setting navbar background to transparent */
+    color: black;
     z-index: 1000;
-    /* Ensure it is above other content */
-    /* Add your additional styling here */
-    padding: 0 15px;
-    /* Add padding on the sides */
+    padding: 0 1rem;
+    box-sizing: border-box;
 }
 
 .logo {
-    height: 60px;
-    /* Match the navbar's height or adjust as needed */
     display: flex;
     align-items: center;
-    /* This will vertically center the logo */
+    height: 60px;
 }
 
 .logo img {
-    height: 100%;
-    /* This will make sure the logo is contained within the navbar's height */
-    max-width: 100%;
-    /* Ensuring the image does not overflow the logo div */
+    height: auto;
+    max-height: 100%;
+}
+
+.nav-link {
+    color: black;
+    /* Set the text color to black */
+    text-decoration: none;
+    margin: 0 10px;
+    /* Spacing between individual links */
+    display: inline-block;
+    padding: 8px 16px;
+    /* Padding inside the link background */
+    border-radius: 18px;
+    /* Rounds the corners to a circular shape */
+    background-color: white;
+    /* Set the link background to white */
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
+    /* Smooth transition for hover states */
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    background-color: black !important;
+    /* Black background on hover/focus */
+    color: white !important;
+    /* White text on hover/focus */
 }
 
 .navbar-menu {
-    display: none;
+    display: flex;
+    align-items: center;
 }
 
 .navbar-toggle {
     display: none;
-    /* Initially hidden on desktop */
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    /* Width of the button */
+    height: 48px;
+    /* Height of the button */
+    border: none;
+    border-radius: 50%;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.25s, color 0.25s;
+    /* Smooth transition for background and icon color */
+    /* Additional styles might be needed depending on your specific design requirements */
 }
 
-/* For the hamburger icon, either use a background image, an icon, or pseudo-elements */
+.navbar-toggle:focus {
+    outline: none;
+    /* Removes the outline to maintain the style on focus, you can replace with a custom style if needed */
+}
+
+.menu-icon {
+    color: black;
+    font-size: 1.5rem;
+    /* Adjust icon size as needed */
+}
+
+.toggle-active,
+.navbar-toggle:hover,
+.navbar-toggle:focus {
+    background-color: black;
+    /* Background color for hover and active states */
+}
+
+.toggle-active .menu-icon,
+.navbar-toggle:hover .menu-icon,
+.navbar-toggle:focus .menu-icon {
+    color: white;
+    /* Icon color for hover and active states */
+}
+
+/* Mobile and Menu Animation */
 
 @media (max-width: 768px) {
 
-    /* Adjust as needed for your mobile breakpoint */
-    .navbar-menu.is-active {
+    .navbar-menu.is-active,
+    .navbar-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        /* Aligns child elements to the right */
+        position: fixed;
+        top: 60px;
+        right: 0;
+        background-color: transparent;
+        /* Transparent background */
+        width: auto;
+        /* Width is set to be as wide as the content */
+        min-width: 50%;
+        /* Minimum width to prevent too narrow appearance */
+        max-width: 100%;
+        /* Maximum width to prevent overflow */
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        text-align: right;
+        padding-right: 20px;
+        /* Padding to ensure content doesn't touch screen edge */
+        max-height: 100vh;
+        /* Set max height to 100% of the viewport height */
+        overflow-y: auto;
+        /* Enable vertical scrolling */
+        padding-bottom: 1rem;
+        /* Add some padding at the bottom for better spacing */
+        /* Make sure other properties like `position`, `top`, `right`, `background-color`
+           are correctly set as your design needs */
+    }
+
+    .navbar-menu .nav-link {
         display: block;
+        margin: 10px 0;
+        width: fit-content;
+        /* Width should fit the content of the link */
+    }
+
+    .navbar-menu.is-active {
+        transform: translateX(0);
     }
 
     .navbar-toggle {
-        display: block;
-        /* Only shown in mobile mode */
+        display: inline-flex;
+        /* Show the toggle button on small screens */
     }
 }

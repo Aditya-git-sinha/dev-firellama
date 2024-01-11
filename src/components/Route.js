@@ -5,6 +5,9 @@ const Routes = {
     HOME: '/',
     ABOUT: '/about',
     CONTACT: '/contact',
+    ALOO: '/',
+    AMAN: '/about',
+    CONTA: '/contact',
     // Add other routes as needed
 };
 
