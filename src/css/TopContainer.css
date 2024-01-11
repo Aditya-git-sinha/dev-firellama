@@ -1,0 +1,50 @@
+/* TopContainer.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.top-container {
+  position: relative;
+  background-color: #F8F8F8;
+  /* Off-white color */
+  text-align: center;
+  /* Center text horizontally */
+  padding: 50px 20px;
+  /* Some padding for breathing space */
+  overflow: hidden;
+  /* Ensures bubbles don't overflow container */
+  /* Add further styling for desktop/mobile responsiveness if necessary */
+}
+
+.business-tagline {
+  color: red;
+  /* Tagline in red color */
+  font-family: 'Pacifico', cursive;
+  /* Using Pacifico from Google Fonts */
+  font-size: 48px;
+  /* Big fonts for attention */
+  margin: 0;
+  /* Remove default margin */
+  position: relative;
+  /* Ensure tagline is above bubbles */
+  z-index: 2;
+  /* Higher z-index to layer above the bubbles */
+  /* Add more styling such as text-shadow, letter-spacing etc. to suit your branding */
+}
+
+.bubble {
+  position: absolute;
+  bottom: -150px;
+  /* Start just off-screen */
+  border-radius: 50%;
+  /* Background color is set by JavaScript; example placeholder: */
+  background-color: rgba(173, 216, 230, 0.7);
+  opacity: 0.6;
+  /* Initial opacity; can be adjusted per design */
+}
+
+@keyframes riseAndDrift {
+  to {
+    transform: translateY(-110vh) translateX(var(--horizontal-shift));
+    opacity: 0;
+  }
+}

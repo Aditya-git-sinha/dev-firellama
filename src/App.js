@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from './components/Footer'; // Adjust the path as necessary for your project structure.
 import Navbar from './components/NavBar';
+import TopContainer from './components/TopContainer';
 
 function App() {
   // Your other component JSX or state management.
@@ -28,7 +29,7 @@ function App() {
       {/* other components */}
       <Navbar />
       <div style={contentStyle}>
-        <DummyContent />
+        <TopContainer />
       </div>
       <Footer />
       {/* End of other components */}
