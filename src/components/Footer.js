@@ -1,9 +1,35 @@
 import React from 'react';
 import '../css/Footer.css';
-import myLogo from '../assets/logo.png'; 
+import myLogo from '../assets/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarkerAlt, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faFacebookF, faTwitter, faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faMapMarkerAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import {faLinkedinIn} from '@fortawesome/free-brands-svg-icons';
+import Routes from './Route';
+import { capitalizeWords } from './Utility';
+
+// TODO : Make the copyright footer overflow proof.
+
+const NavigationList = () => {
+    return (
+        <ul>
+            {Object.entries(Routes).map(([key, value]) => (
+                <li key={key}>
+                    <a href={value}>{capitalizeWords(key)}</a>
+                </li>
+            ))}
+        </ul>
+    );
+};
+
+const MyIcon = ({ icon, text, href, color = 'black', size = '2x' }) => (
+    <div style={{ display: 'flex', alignItems: 'center' }}>
+        <FontAwesomeIcon icon={icon} color={color} size={size} />
+        <p style={{ marginLeft: '8px', marginBottom: '0', fontSize: '16px' }}>
+            {href ? <a href={href} style={{ textDecoration: 'none', color: 'inherit' }}>{text}</a> : text}
+        </p>
+    </div>
+);
+
 
 function Footer() {
     return (
@@ -13,43 +39,35 @@ function Footer() {
                     <h3>
                         <img src={myLogo} alt="Company Logo" className="footer-logo" />
                     </h3>
-                    <p className="footer-links">
-                        <a href="#" className="link-1">Home</a>
-                        <a href="#">Blog</a>
-                        <a href="#">Pricing</a>
-                        <a href="#">About</a>
-                        <a href="#">Faq</a>
-                        <a href="#">Contact</a>
-                    </p>
-                    <p className="footer-company-name">Company Name © 2024</p>
+                    <p className="logo-text">Simplify Succeed </p>
                 </div>
-
-                <div className="footer-center">
-                    <div>
-                        <FontAwesomeIcon icon={faMapMarkerAlt} />
-                        <p><span>444 S. Cedros Ave</span> Solana Beach, California</p>
-                    </div>
-                    <div>
-                        <FontAwesomeIcon icon={faPhone} />
-                        <p>+1.[PHONE]</p>
-                    </div>
-                    <div>
-                        <FontAwesomeIcon icon={faEnvelope} />
-                        <p><a href="mailto:[EMAIL]">[EMAIL]</a></p>
-                    </div>
+                <div className="footer-center-left">
+                    <h3>Quick Links</h3>
+                    <NavigationList />
+                </div>
+                <div className="footer-center-right">
+                    <MyIcon icon={faMapMarkerAlt} text="Vadodara, Gujarat, India" size='2x' color='red'  />
+                    <MyIcon icon={faEnvelope} text="Reach Out on Email" href="mailto:aditya113141@firellama.app" color='blue'/>
+                    <MyIcon icon={faMapMarkerAlt} text="Vadodara, Gujarat, India" size='2x' color='red'  />
+                    <MyIcon icon={faEnvelope} text="Reach Out on Email" href="mailto:aditya113141@firellama.app" color='blue'/>
                 </div>
 
                 <div className="footer-right">
-                    <p className="footer-company-about">
-                        <span>About the company</span>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    <p className="footer-company-social">
+                        
+                    Crafting bespoke software experiences to propel your business forward with cutting-edge technology tailored to your vision.
                     </p>
                     <div className="footer-icons">
-                        <a href="https://www.facebook.com"><FontAwesomeIcon icon={faFacebookF} /></a>
-                        <a href="https://www.twitter.com"><FontAwesomeIcon icon={faTwitter} /></a>
+                        {/* <a href="https://www.facebook.com"><FontAwesomeIcon icon={faFacebookF} /></a>
+                        <a href="https://www.twitter.com"><FontAwesomeIcon icon={faTwitter} /></a> */}
                         <a href="https://www.linkedin.com"><FontAwesomeIcon icon={faLinkedinIn} /></a>
-                        <a href="https://www.github.com"><FontAwesomeIcon icon={faGithub} /></a>
+                        {/* <a href="https://www.github.com"><FontAwesomeIcon icon={faGithub} /></a> */}
                     </div>
+                </div>
+            </footer>
+            <footer className="footer-copyright">
+                <div className="copyright-text">
+                    <p>Copyright Text</p>
                 </div>
             </footer>
         </div>
