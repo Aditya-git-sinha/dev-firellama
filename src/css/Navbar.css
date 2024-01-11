@@ -1,0 +1,59 @@
+.navbar {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    display: flex;
+    /* To align children inline */
+    justify-content: space-between;
+    /* To separate logo and nav items */
+    align-items: center;
+    /* To center items vertically */
+    color: white;
+    z-index: 1000;
+    /* Ensure it is above other content */
+    /* Add your additional styling here */
+    padding: 0 15px;
+    /* Add padding on the sides */
+}
+
+.logo {
+    height: 60px;
+    /* Match the navbar's height or adjust as needed */
+    display: flex;
+    align-items: center;
+    /* This will vertically center the logo */
+}
+
+.logo img {
+    height: 100%;
+    /* This will make sure the logo is contained within the navbar's height */
+    max-width: 100%;
+    /* Ensuring the image does not overflow the logo div */
+}
+
+.navbar-menu {
+    display: none;
+}
+
+.navbar-toggle {
+    display: none;
+    /* Initially hidden on desktop */
+}
+
+/* For the hamburger icon, either use a background image, an icon, or pseudo-elements */
+
+@media (max-width: 768px) {
+
+    /* Adjust as needed for your mobile breakpoint */
+    .navbar-menu.is-active {
+        display: block;
+    }
+
+    .navbar-toggle {
+        display: block;
+        /* Only shown in mobile mode */
+    }
+}
