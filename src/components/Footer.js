@@ -3,7 +3,7 @@ import '../css/Footer.css';
 import myLogo from '../assets/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import {faLinkedinIn} from '@fortawesome/free-brands-svg-icons';
+import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import Routes from './Route';
 import { capitalizeWords } from './Utility';
 
@@ -46,16 +46,16 @@ function Footer() {
                     <NavigationList />
                 </div>
                 <div className="footer-center-right">
-                    <MyIcon icon={faMapMarkerAlt} text="Vadodara, Gujarat, India" size='2x' color='red'  />
-                    <MyIcon icon={faEnvelope} text="Reach Out on Email" href="mailto:aditya113141@firellama.app" color='blue'/>
-                    <MyIcon icon={faMapMarkerAlt} text="Vadodara, Gujarat, India" size='2x' color='red'  />
-                    <MyIcon icon={faEnvelope} text="Reach Out on Email" href="mailto:aditya113141@firellama.app" color='blue'/>
+                    <MyIcon icon={faMapMarkerAlt} text="Vadodara, Gujarat, India" size='2x' color='red' />
+                    <MyIcon icon={faEnvelope} text="Reach Out on Email" href="mailto:aditya113141@firellama.app" color='blue' />
+                    <MyIcon icon={faMapMarkerAlt} text="Vadodara, Gujarat, India" size='2x' color='red' />
+                    <MyIcon icon={faEnvelope} text="Reach Out on Email" href="mailto:aditya113141@firellama.app" color='blue' />
                 </div>
 
                 <div className="footer-right">
                     <p className="footer-company-social">
-                        
-                    Crafting bespoke software experiences to propel your business forward with cutting-edge technology tailored to your vision.
+
+                        Crafting bespoke software experiences to propel your business forward with cutting-edge technology tailored to your vision.
                     </p>
                     <div className="footer-icons">
                         {/* <a href="https://www.facebook.com"><FontAwesomeIcon icon={faFacebookF} /></a>
