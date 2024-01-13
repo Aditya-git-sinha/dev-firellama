@@ -1,38 +1,37 @@
-import React from 'react';
-import Footer from './components/Footer'; // Adjust the path as necessary for your project structure.
+import React, { useState } from 'react';
+import Footer from './components/Footer';
 import Navbar from './components/NavBar';
 import TopContainer from './components/TopContainer';
+import SecondContainer from './components/SecondContainer';
+import ThirdContainer from './components/ThirdContainer';
+import Dialog from './components/Dialog';
 
 function App() {
-  // Your other component JSX or state management.
+  const [selectedProject, setSelectedProject] = useState(null);
 
-  // Imagine a DummyContent component that is just a div filled with text to enable scrolling.
-  const DummyContent = () => (
-    <div style={{
-      height: '2000px',
-      padding: '1rem',
-      marginTop: '60px', // Add this if the Navbar is fixed to prevent overlap
-      background: 'linear-gradient(to bottom, #ADD8E6, #90EE90)' // This is the gradient
-    }}>
-      <h2>Dummy Content for Scrolling</h2>
-      <p>This is just placeholder text to test scrolling within the app layout. Repeat as needed to create a large scrollable area.</p>
-    </div>
-  );
+  const openDialog = (project) => {
+    setSelectedProject(project);
+  };
 
-  const contentStyle = {
-    paddingTop: '60px', // This should match the height of your Navbar + any additional desired space
-    marginTop: 0
+  const closeDialog = () => {
+    setSelectedProject(null);
   };
 
   return (
     <div className="App">
-      {/* other components */}
       <Navbar />
-      <div style={contentStyle}>
-        <TopContainer />
-      </div>
+      <TopContainer />
+      <SecondContainer />
+      <ThirdContainer openDialog={openDialog} />
       <Footer />
-      {/* End of other components */}
+      <Dialog isOpen={selectedProject !== null} closeDialog={closeDialog}>
+        {selectedProject && (
+          <>
+            <img src={selectedProject.pictureLocation} alt={selectedProject.title} className="dialog-image" />
+            <div className="large-description">{selectedProject.largeDescription}</div>
+          </>
+        )}
+      </Dialog>
     </div>
   );
 }

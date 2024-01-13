@@ -1,0 +1,27 @@
+/* SecondContainer.css */
+
+.second-container {
+    margin-top: 0;
+    padding-top: 2rem;
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    background-color: #ffffff;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden; /* This will keep any overflowing parts of your canvas within the bounds of the second-container */
+  }
+  
+  /* Target devices that are between 1024px and 1440px wide and have hover capabilities */
+  @media (min-width: 1024px) and (max-width: 1440px) and (hover: hover) {
+    .second-container .DustParticles {
+      display: block;
+    }
+  }
+  
+  /* Hide DustParticles on devices smaller than 1024px or those that do not have hover capabilities */
+  @media (max-width: 1023px), (hover: none) {
+    .second-container .DustParticles {
+      display: none;
+    }
+  }

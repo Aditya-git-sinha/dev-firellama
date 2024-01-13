@@ -1,0 +1,69 @@
+/* SmallLaptopComponent.css */
+
+.small-laptop {
+    position: relative;
+    width: 24rem; /* Adjust for the size you want */
+    aspect-ratio: 16 / 9; /* Maintain screen aspect ratio */
+  }
+  
+  .small-laptop__screen {
+    border-radius: 1rem;
+    background: #ecf1f7;
+    background-image: linear-gradient(to bottom, #333, #111);
+    padding: 8%;
+    box-shadow: 0 .05rem 0 #cfcfcf;
+    border: 1px solid #ccc;
+    height: 0;
+    padding-bottom: 56.25%; /* aspect-ratio: 16/9 */
+  }
+  
+  .small-laptop__display {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, 
+      rgb(255, 153, 0), /* Orange */
+      rgb(255, 255, 255), /* White */
+      rgb(19, 136, 8)     /* Green */
+    );
+  }
+  
+  .small-laptop__bottom {
+    height: .8rem;
+    background: #e9eff5;
+    background-image: linear-gradient(to right, #d2dde9 0%, #f9fcff 15%, #e5ebf2 40%, #e5ebf2 60%, #f9fcff 85%, #d2dde9 100%);
+    z-index: 1;
+  }
+  
+  .small-laptop__bottom::before {
+    display: block;
+    width: 20%;
+    height: .35rem;
+    margin: 0 auto;
+    background: #f6f9fc;
+    background-image: linear-gradient(to right, #c3cfdb 0%, #f6f9fc 10%, #f6f9fc 90%, #c3cfdb 100%);
+    content: "";
+  }
+  
+  .small-laptop__under {
+    position: absolute;
+    top: 100%;
+    left: 35%;
+    width: 30%;
+    height: .7rem;
+    background: #e2e8f0;
+    background-image: linear-gradient(to bottom, #e2e8f0, #bec7d1);
+  }
+  
+  /* No shadow for simplicity and size constraints, but can be added if desired */
+  
+  /* Adjustments for responsive design, if needed */
+  @media (max-width: 768px) {
+    .small-laptop {
+      width: 100%; /* Full width on small screens */
+      height: auto; /* Auto height on small screens */
+    }
+    
+    .small-laptop__screen {
+      padding-bottom: 50%; /* Increase padding-bottom to maintain aspect ratio if width is 100% */
+    }
+  }

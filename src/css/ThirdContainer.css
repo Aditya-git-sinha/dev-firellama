@@ -1,0 +1,169 @@
+/* ThirdContainer.css */
+
+.third-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  background-color: #f5f5f5;
+}
+
+.project-box {
+  border: 1px solid #ddd;
+  background: #fdfdfd;
+  padding: 15px;
+  width: calc(33.333% - 20px);
+  margin: 10px 10px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.small-description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.view-more-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.megsoft-product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  flex-direction: row;
+  background-color: red;
+  color: white;
+}
+
+.megsoft-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.megsoft-product .laptop-image {
+  flex-shrink: 0;
+  margin-right: 2rem;
+}
+
+.megsoft-text {
+  text-align: left;
+  padding-left: 2rem;
+}
+
+.megsoft-product h1,
+.megsoft-product h2 {
+  font-family: 'Raleway', Arial, Helvetica, sans-serif;
+  text-shadow: 1px 1px 2px black;
+}
+
+.description-background {
+  background-color: white;
+  padding: 1rem;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
+.megsoft-description {
+  color: red;
+  margin: 0;
+}
+
+.coming-soon {
+  font-size: 20px;
+  margin-top: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Updated styles for the Coming Soon button to match the provided styles */
+.btn-2 {
+  outline: none;
+  display: block;
+  width: 15rem;
+  height: 5rem;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 0.3rem;
+  box-shadow: 0 0.3rem 0.6rem #181135;
+  margin: 0 auto;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  background: var(--grad-liner);
+  /* Fallback for browsers that do not support CSS variables */
+  background: linear-gradient(86deg, #4776e6 0%, #8e54e9 100%);
+}
+
+.btn-2:hover,
+.btn-2:focus-visible {
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 4px 12px;
+}
+
+.btn-2:active {
+  box-shadow: rgba(0, 0, 0, 0.6) 0 2px 4px;
+  transform: scale(0.96);
+}
+
+/* Media query adjustments */
+@media (max-width: 1024px) {
+  .project-box {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .project-box {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .megsoft-content,
+  .megsoft-product {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .megsoft-product .laptop-image {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .megsoft-text {
+    text-align: center;
+    padding-left: 0;
+    padding-top: 1rem;
+  }
+
+  .megsoft-description {
+    text-align: center;
+  }
+
+  .coming-soon {
+    margin-top: 10px;
+  }
+}
+
+/* Assuming --grad-liner is defined in a global stylesheet, otherwise define it here as well */
+:root {
+  --grad-liner: linear-gradient(86deg, #4776e6 0%, #8e54e9 100%);
+}
