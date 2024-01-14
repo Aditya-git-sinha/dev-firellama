@@ -1,6 +1,7 @@
 import React from 'react';
 import SmallLaptopComponent from './SmallLaptopDisplay';
 import previousProjectsData from './previousProjects.json';
+import megsoft from '../assets/megsoft.png';
 import '../css/ThirdContainer.css';
 
 const ThirdContainer = ({ openDialog }) => {
@@ -15,7 +16,7 @@ const ThirdContainer = ({ openDialog }) => {
         ))}
 
         <div className="project-box megsoft-product">
-            <SmallLaptopComponent />
+            <SmallLaptopComponent iframeSrc={megsoft} />
             <div className="megsoft-text">
                 <h1>MegSoft - Business Accounting Software</h1>
                 <div className="description-background">

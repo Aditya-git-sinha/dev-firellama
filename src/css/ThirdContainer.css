@@ -6,13 +6,14 @@
   justify-content: space-around;
   gap: 20px;
   background-color: #f5f5f5;
+  margin: 10px 10px 20px;
 }
 
 .project-box {
   border: 1px solid #ddd;
   background: #fdfdfd;
   padding: 15px;
-  width: calc(33.333% - 20px);
+  width: calc(90% - 20px);
   margin: 10px 10px 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
@@ -80,6 +81,13 @@
   padding: 1rem;
   margin: 10px 0;
   border-radius: 10px;
+  margin: 10px 0;
+}
+
+/* Set the bottom margin of the last elements to zero */
+.project-box:last-child,
+.description-background:last-child {
+  margin-bottom: 0;
 }
 
 .megsoft-description {
@@ -127,7 +135,7 @@
 /* Media query adjustments */
 @media (max-width: 1024px) {
   .project-box {
-    width: calc(50% - 20px);
+    width: calc(90% - 20px);
   }
 }
 
