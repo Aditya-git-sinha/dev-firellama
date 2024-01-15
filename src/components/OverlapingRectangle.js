@@ -1,14 +1,24 @@
 import React from 'react';
-import '../css/OverlapingRectangle.css';
+import { shadeColor } from './Utility'; // Assumes Utility.js is in the same directory
+import '../css/OverlapingRectangle.css'; // Adjust the import path as necessary
 
-const OverlapingRectangles = () => {
+const OverlapingRectangles = ({ header, technologies, backgroundColor, imageSrc }) => {
+  const listBackgroundColor = shadeColor(backgroundColor, -20);
+
   return (
     <div className="container">
-      <div className="big-rectangle">
-        {/* Big rectangle can contain content or images here */}
+      <div className="big-rectangle" style={{ backgroundImage: `url(${imageSrc})` }}>
+        {/* Now big rectangle will display the image */}
       </div>
-      <div className="overlaping-rectangle">
-        {/* Overlaping content could go here */}
+      <div className="overlaping-rectangle" style={{ backgroundColor: backgroundColor }}>
+        <h2 style={{ color: 'white' }}>{header}</h2>
+        <div className="technologies-layout" style={{ backgroundColor: listBackgroundColor }}>
+          {technologies.map((tech, index) => (
+            <span key={index} className="technology-item" style={{ color: 'white' }}>
+              {tech}
+            </span>
+          ))}
+        </div>
       </div>
     </div>
   );

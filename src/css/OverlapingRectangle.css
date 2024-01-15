@@ -1,32 +1,73 @@
 .container {
   width: 90%;
-  /* Increase container width */
   max-width: 800px;
-  /* Adjust the max-width appropriately */
   margin: auto;
-  /* This keeps .container centered in the flex parent */
   position: relative;
   aspect-ratio: 16 / 9;
-  /* Maintains the blue rectangle's aspect ratio */
 }
 
 .big-rectangle {
   width: 100%;
-  /* Takes up 100% of .container's width */
   aspect-ratio: 16 / 9;
-  /* Ensures that big rectangle maintains its aspect ratio */
-  background-color: #1233d6;
+  background-size: cover;
+  background-position: center;
 }
 
 .overlaping-rectangle {
   width: 40%;
-  /* Adjust to the desired size, ensuring it’s proportionate to the .container size */
   aspect-ratio: 1;
-  /* Maintains the red rectangle's aspect ratio */
   position: absolute;
   right: -10%;
-  /* Adjust so it doesn't go outside */
   bottom: -10%;
-  /* Adjust so it doesn't go outside */
-  background-color: #d93535;
+  padding: 1rem; /* Keep the fixed 1rem padding above 972px */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.overlaping-rectangle h2 {
+  margin-bottom: 1rem;
+  color: white;
+  font-size: 1.5rem; /* Keep the fixed 1.5rem font size above 972px */
+}
+
+.technologies-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px; /* Keep the fixed padding above 972px */
+}
+
+.technology-item {
+  padding: 5px 10px; /* Keep the fixed padding for items above 972px */
+  margin: 5px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Media queries */
+@media (max-width: 972px) {
+  .overlaping-rectangle {
+    /* Scale the padding with the viewport width */
+    padding: calc(1rem * (100vw / 972));
+  }
+  
+  .overlaping-rectangle h2 {
+    /* Scale the font size with the viewport width */
+    font-size: calc(1.5rem * (100vw / 972));
+  }
+  
+  .technologies-layout {
+    /* Scale the layout padding with the viewport width */
+    padding: calc(10px * (100vw / 972));
+  }
+  
+  .technology-item {
+    /* Scale the padding and maybe the font size within technology items as well */
+    padding: calc(5px * (100vw / 972)) calc(10px * (100vw / 972));
+    /* Optionally scale the font-size too if desired */
+    /* font-size: calc(1rem * (100vw / 972)); */
+  }
 }
