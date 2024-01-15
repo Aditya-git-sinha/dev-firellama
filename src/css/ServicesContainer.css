@@ -1,0 +1,42 @@
+/* ServicesContainer.css */
+
+.overlaping-rectangles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 20px; 
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.carousel-arrows {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px; 
+}
+
+.prev-arrow, .next-arrow {
+  border: none;
+  background-color: #fff; 
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.prev-arrow:hover, .next-arrow:hover {
+  background-color: #ccc;
+}
+
+/* Ensure to add any further custom styles you might need for the Carousel */
