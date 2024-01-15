@@ -1,0 +1,44 @@
+/* Carousel.css */
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .carousel-inner {
+    display: flex;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .carousel-item {
+    min-width: 100%; /* Ensure each item takes full width of the container */
+    box-sizing: border-box;
+    /* Style your items (height, background, etc.) */
+  }
+  
+  .carousel-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Spacing between your carousel and the controls */
+  }
+  
+  .carousel-controls button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 24px; /* Large enough to click and see */
+    /* Add further button styling as desired */
+  }
+  
+  /* Hide the arrow focus outlines */
+  .carousel-controls button:focus {
+    outline: none;
+  }
+  
+  /* Additional styles if you want to customize further */
+  .carousel-controls button:hover {
+    background-color: #f0f0f0; /* Light grey background on hover */
+    transition: background-color 0.2s;
+  }
