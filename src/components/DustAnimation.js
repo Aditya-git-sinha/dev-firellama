@@ -6,7 +6,6 @@ const canvasStyles = {
 };
 
 const DustParticles = (props) => {
-  console.log('init')
   const canvasRef = useRef(null);
   let image = new Image();
   let particlesArray = [];
@@ -72,7 +71,6 @@ const DustParticles = (props) => {
 
     const resizeCanvas = () => {
       if (props.encodedImageData && image.complete) {
-        console.log('damn')
         initParticlesFromImage();
       }
     }
@@ -107,7 +105,6 @@ const DustParticles = (props) => {
     const initParticlesFromImage = () => {
       canvas.width = image.width;
       canvas.height = image.height;
-      console.log(image.width, image.height, "fck")
       if (image.width > 0 && image.height > 0) {
         ctx.drawImage(image, 0, 0);
         const pixelData = ctx.getImageData(0, 0, image.width, image.height);
@@ -122,7 +119,6 @@ const DustParticles = (props) => {
 
     const initParticles = () => {
       image.src = `data:image/png;base64,${props.encodedImageData.trim()}`;
-      console.log(image.height, image.width, "meow")
       image.onload = initParticlesFromImage
     };
 
