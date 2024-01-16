@@ -7,6 +7,7 @@
   gap: 20px;
   background-color: #f5f5f5;
   margin: 10px 10px 20px;
+  padding-top: 2%;
 }
 
 .project-box {
@@ -132,6 +133,30 @@
   transform: scale(0.96);
 }
 
+.previous-project {
+  border: 1px solid #ddd;
+  background: #fdfdfd;
+  padding: 15px;
+  width: calc(33.333% - 20px);
+  margin: 10px 10px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+
+.section-heading {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem; /* Starting font size for larger screens */
+  margin: 2rem 0 1.5rem; /* Add some space above and below the heading */
+  color: #333; /* An example color - adjust as needed */
+}
+
+
+
 /* Media query adjustments */
 @media (max-width: 1024px) {
   .project-box {
@@ -143,6 +168,11 @@
   .project-box {
     width: 100%;
     margin: 10px 0;
+  }
+
+  .section-heading {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
   }
 
   .megsoft-content,
@@ -168,6 +198,14 @@
 
   .coming-soon {
     margin-top: 10px;
+  }
+}
+
+/* Existing media query for mobile */
+@media (max-width: 600px) {
+  .previous-project {
+    flex-basis: 100%; /* Take full width on smaller screens */
+    margin: 10px 0; /* Adjust margin specifically for mobile */
   }
 }
 
