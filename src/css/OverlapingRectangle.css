@@ -14,12 +14,13 @@
 }
 
 .overlaping-rectangle {
-  width: 40%;
+  width: 20vw;
   aspect-ratio: 1;
+  height: auto;
   position: absolute;
   right: -10%;
   bottom: -10%;
-  padding: 1rem; /* Keep the fixed 1rem padding above 972px */
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,47 +28,65 @@
 }
 
 .overlaping-rectangle h2 {
-  margin-bottom: 1rem;
   color: white;
-  font-size: 1.5rem; /* Keep the fixed 1.5rem font size above 972px */
+  /* Above 972px, font-size is fixed */
+  font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
+
+
 .technologies-layout {
+  
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  padding: 10px; /* Keep the fixed padding above 972px */
+  padding: 10px;
 }
 
 .technology-item {
-  padding: 5px 10px; /* Keep the fixed padding for items above 972px */
   margin: 5px;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  padding: 5px 10px;
 }
 
-/* Media queries */
-@media (max-width: 972px) {
+.technology-item span{
+  font-size: clamp(0rem, 1rem, 1.5rem);
+}
+
+@media (max-width: 990px) {
+  .big-rectangle {
+    display: none; /* This will hide the big-rectangle when the viewport width is below 990px */
+  }
+
   .overlaping-rectangle {
-    /* Scale the padding with the viewport width */
-    padding: calc(1rem * (100vw / 972));
+    position: static; /* Resets the position */
+    width: 100%; /* Takes the full width of the container */
+    right: 0;
+    bottom: 0;
+    margin-top: 20px; /* Optional: if you want some space between the rectangles */
+  }
+
+  /* If you want the the overlaping-rectangle to be the same aspect ratio as the big-rectangle */
+  .overlaping-rectangle {
+    aspect-ratio: 16 / 9;
+    height: auto;
+  }
+}
+
+/* @media (max-width: 972px) {
+  .overlaping-rectangle {
+    width: 45vw; 
   }
   
   .overlaping-rectangle h2 {
-    /* Scale the font size with the viewport width */
-    font-size: calc(1.5rem * (100vw / 972));
+    font-size: calc(1.5rem * (100% / 972)); 
   }
   
-  .technologies-layout {
-    /* Scale the layout padding with the viewport width */
-    padding: calc(10px * (100vw / 972));
+  .technologies-layout, .technology-item {
+    
+    padding: calc(0.5rem * (100vw / 972)); 
   }
-  
-  .technology-item {
-    /* Scale the padding and maybe the font size within technology items as well */
-    padding: calc(5px * (100vw / 972)) calc(10px * (100vw / 972));
-    /* Optionally scale the font-size too if desired */
-    /* font-size: calc(1rem * (100vw / 972)); */
-  }
-}
+
+}  */
