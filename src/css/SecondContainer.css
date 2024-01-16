@@ -1,27 +1,115 @@
 /* SecondContainer.css */
 
 .second-container {
-    margin-top: 0;
-    padding-top: 2rem;
-    padding-right: 1rem;
-    padding-bottom: 2rem;
-    padding-left: 1rem;
-    background-color: #ffffff;
-    width: 100%;
-    box-sizing: border-box;
-    overflow: hidden; /* This will keep any overflowing parts of your canvas within the bounds of the second-container */
-  }
-  
-  /* Target devices that are between 1024px and 1440px wide and have hover capabilities */
-  @media (min-width: 1024px) and (max-width: 1440px) and (hover: hover) {
-    .second-container .DustParticles {
-      display: block;
-    }
-  }
-  
-  /* Hide DustParticles on devices smaller than 1024px or those that do not have hover capabilities */
-  @media (max-width: 1023px), (hover: none) {
-    .second-container .DustParticles {
-      display: none;
-    }
-  }
+  display: flex; /* Use flexbox to layout children horizontally */
+  align-items: center; /* Align children vertically in the center */
+  justify-content: space-evenly; /* Space between DustParticles and IdeaPromotion */
+  margin-top: 0;
+  padding: 2rem;
+  background-color: #ffffff;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-direction: row;
+}
+
+.idea-promotion::before {
+  content: '';
+  position: absolute;
+  top: 10%;    /* Position as needed */
+  left: 10%;   /* Position as needed */
+  width: 100%;  
+  height: 120%; /* Cover enough area */
+  z-index: 1;   /* Below the content but above the background */
+  background: 
+    /* Circle 1 */
+    url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><circle fill="%23FFDAC1" cx="100" cy="100" r="80"/></svg>') no-repeat 10% 20%,
+    /* Triangle 1 */
+    url('data:image/svg+xml;utf8,<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path d="M100 10 L190 190 L10 190 Z" fill="%23FFB2B8" /></svg>') no-repeat 80% 80%,
+    /* Circle 2, Triangle 2, etc. */
+    /* Add more shapes here as desired */
+    ;
+  background-size: 15% auto, 20% auto; /* Sizes of the shapes */
+  pointer-events: none;
+}
+
+.idea-promotion {
+  width: 40%;
+  padding-left: 1rem;
+  position: relative; /* Context for the pseudo-element */
+  z-index: 2;
+  /* Add pastel colored shapes in the background */
+  background: 
+    /* Shape 1 */
+    url('data:image/svg+xml;utf8,<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg"><rect x="50" y="50" width="100" height="100" fill="%23FFB2B8" fill-opacity="0.8"/></svg>') no-repeat,
+    /* Shape 2 */
+    url('data:image/svg+xml;utf8,<svg width="150" height="150" xmlns="http://www.w3.org/2000/svg"><circle cx="75" cy="75" r="70" fill="%23FFDAC1" fill-opacity="0.9"/></svg>') no-repeat 100% 0,
+    /* Shape 3 and so on... Adjust as needed */
+    #FFF; /* Fallback color */
+}
+
+
+
+.idea-promotion::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: 
+    radial-gradient(circle, #ebf3eb 20%, transparent 20.5%), /* Increase the dot size */
+    radial-gradient(circle, transparent 20%, transparent); /* Adjust the gap size */
+  background-position: 0 0, 10px 10px; /* Position shifts depending on the new size */
+  background-size: 20px 20px; /* Increase the grid size */
+  opacity: 0.7; /* You can adjust the opacity as needed */
+  pointer-events: none; /* This allows clicks to pass through to elements below */
+  z-index: -1; /* Keep the grid behind the content */
+}
+
+.idea-promotion h1 {
+  font-size: 2rem; /* Adjust the size as needed */
+  color: #000; /* Text color */
+  margin-bottom: 1rem; /* Space between heading and text */
+  /* Your existing h1 styles, then add the solid bar */
+  position: relative; /* Ensures the bar is positioned relative to the h1 */
+  padding-bottom: .2rem; /* Adds some space between text and bar */
+  margin-bottom: 1rem;
+}
+
+
+.idea-promotion h1::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0; /* Aligns the bar with the bottom of the h1 text */
+  height: 8px; /* Thickness of the bar */
+  background-color: #000000; /* Color of the bar */
+}
+
+.idea-promotion p {
+  font-size: 1rem; /* Adjust the size as needed */
+  color: #333; /* Text color */
+  line-height: 1.6; /* Line height for paragraph */
+}
+
+
+
+
+
+@media (max-width: 1023px), (hover: none) {
+.second-container {
+  flex-direction: column; /* Stack the components on top of each other on smaller screens */
+}
+
+.idea-promotion {
+  width: 100%; /* Take the full width on smaller screens */
+  padding: 0; /* Remove padding on smaller screens */
+  text-align: center; /* Center align text on smaller screens */
+}
+
+.second-container .DustParticles {
+  display: none; /* Hide DustParticles as originally specified */
+}
+}
