@@ -5,17 +5,29 @@ import '../css/Navbar.css';
 import logo from '../assets/logo.png';
 import Routes from './Route'; // Adjust path if necessary
 import { capitalizeWords } from './Utility';
+import ContactForm from './ContactUs';
 
-function Navbar() {
+function Navbar({ openDialog }) {
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     const toggleMobileMenu = () => {
         setMobileMenuOpen(!isMobileMenuOpen);
     };
 
+    const handleContactDialog = () => {
+        openDialog(<ContactForm />);
+    };
+
+    var choose = (path) => {
+        if (path === '/contact') {
+            return handleContactDialog
+        }
+        else return null
+    }
+
     // Generate navigation links from Routes
     const navLinks = Object.entries(Routes).map(([key, path]) => (
-        <a key={key} href={path} className="nav-link">
+        <a key={key} className="nav-link" onClick={choose(path)}>
             {capitalizeWords(key)} {/* Render path label */}
         </a>
     ));

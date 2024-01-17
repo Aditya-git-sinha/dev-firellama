@@ -5,32 +5,30 @@ import TopContainer from './components/TopContainer';
 import SecondContainer from './components/SecondContainer';
 import ThirdContainer from './components/ThirdContainer';
 import Dialog from './components/Dialog';
+import ServicesContainer from './components/ServicesContainer';
+import ContactUs from './components/ContactUs';
 
 function App() {
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [child, setChild] = useState(null);
 
-  const openDialog = (project) => {
-    setSelectedProject(project);
+  const openDialog = (child) => {
+    setChild(child);
   };
 
   const closeDialog = () => {
-    setSelectedProject(null);
+    setChild(null);
   };
 
   return (
     <div className="App">
-      <Navbar />
+      <Navbar openDialog={openDialog} />
       <TopContainer />
       <SecondContainer />
+      <ServicesContainer />
       <ThirdContainer openDialog={openDialog} />
       <Footer />
-      <Dialog isOpen={selectedProject !== null} closeDialog={closeDialog}>
-        {selectedProject && (
-          <>
-            <img src={selectedProject.pictureLocation} alt={selectedProject.title} className="dialog-image" />
-            <div className="large-description">{selectedProject.largeDescription}</div>
-          </>
-        )}
+      <Dialog isOpen={child !== null} closeDialog={closeDialog}>
+        {child}
       </Dialog>
     </div>
   );
