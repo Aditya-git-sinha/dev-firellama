@@ -24,17 +24,76 @@
   gap: 2rem;
 }
 
+.previous-project {
+  border: 1px solid #ddd;
+  background: #fdfdfd;
+  padding: 15px;
+  width: calc(33.333% - 20px);
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */
+  justify-content: flex-start; /* Align children to the start of the flex container */
+  gap: 1rem; /* Adjust as necessary */
+  overflow: hidden; /* Ensures that content does not overflow */
+}
+
+.responsive-carousel-image{
+  max-width: 100%;  /* Ensures the image is not larger than its container */
+  max-height: 500px; /* Adjust the value according to what you deem fit for your design */
+  height: auto;  /* Preserve the aspect ratio of the image. */
+  display: block; /* Ensures the image takes its own line within the carousel-item. */
+  margin: auto; /* Centers the image in the carousel item if the width is less than 100%. */
+}
+
+/* Add this to your existing stylesheet */
+.project-description-list {
+  list-style-type: disc; /* Or you can choose another style such as 'circle' or 'square' */
+  padding-left: 20px; /* Gives some space inside the list */
+  margin-top: 20px; /* Additional space above the list */
+  margin-bottom: 20px; /* Additional space below the list */
+}
+
+.project-description-list li {
+  margin-bottom: 10px; /* Space between list items */
+  font-size: 16px; /* Adjust the font size as needed */
+  line-height: 1.6; /* Makes it more readable by increasing line height */
+}
+
+.project-description-list li strong {
+  font-weight: bold; /* Increases the font-weight for the key */
+  margin-right: 5px; /* Adds some space between the key and the colon */
+}
+
+.project-description-list li::before {
+  content: '• '; /* Adds a bullet before each list item */
+  color: #333; /* Bullet color, can match your design */
+  font-size: 20px; /* Bullet size */
+  margin-left: -20px; /* Aligns bullets properly with the text */
+  position: absolute; /* Positions the bullet absolutely within the li element */
+}
+
+.project-title {
+  font-size: 16px; /* Example size, adjust as needed */
+  font-weight: bold; /* Make the title bold */
+  color: #333; /* Dark color for the title */
+  margin-top: 10px; /* Space between the image and the title */
+  text-align: center; /* Center the title below the image */
+}
+
 .project-image {
-  width: 100%;
-  height: auto;
-  border-bottom: 1px solid #ddd;
+  width: 100%; /* Ensures the image is contained within the parent */
+  height: auto; /* Keeps the aspect ratio of the image */
   margin-bottom: 10px;
 }
 
 .small-description {
   font-size: 14px;
   color: #666;
-  margin-bottom: 20px;
+  text-align: center; /* Center the text if needed */
+  padding: 0 10px; /* Adds padding inside the description area */
 }
 
 .view-more-btn {
@@ -43,6 +102,7 @@
   color: white;
   border: none;
   cursor: pointer;
+  margin-top: auto; /* Pushes the button to the bottom of the flex container */
 }
 
 .megsoft-product {
@@ -131,20 +191,6 @@
 .btn-2:active {
   box-shadow: rgba(0, 0, 0, 0.6) 0 2px 4px;
   transform: scale(0.96);
-}
-
-.previous-project {
-  border: 1px solid #ddd;
-  background: #fdfdfd;
-  padding: 15px;
-  width: calc(33.333% - 20px);
-  margin: 10px 10px 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  gap: 2rem;
 }
 
 .section-heading {

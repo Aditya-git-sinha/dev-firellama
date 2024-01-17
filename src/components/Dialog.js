@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import '../css/Dialog.css'; // Make sure the path matches your project structure.
+import '../css/Dialog.css'; // Adjust the import path to where your CSS file is located
 
 const Dialog = ({ isOpen, closeDialog, children }) => {
     if (!isOpen) return null;
@@ -8,7 +8,9 @@ const Dialog = ({ isOpen, closeDialog, children }) => {
     return ReactDOM.createPortal(
         <div className="dialog-overlay" onClick={closeDialog}>
             <div className="dialog-content" onClick={e => e.stopPropagation()}>
-                {children}
+                <div className="dialog-body">
+                    {children}
+                </div>
                 <button onClick={closeDialog} className="close-btn">Close</button>
             </div>
         </div>,
@@ -17,4 +19,3 @@ const Dialog = ({ isOpen, closeDialog, children }) => {
 };
 
 export default Dialog;
-

@@ -3,6 +3,9 @@ import SmallLaptopComponent from './SmallLaptopDisplay';
 import previousProjectsData from './previousProjects.json';
 import megsoft from '../assets/megsoft.png';
 import '../css/ThirdContainer.css';
+import CustomCarousel from './Carousel';
+
+
 
 const ThirdContainer = ({ openDialog }) => {
   return (
@@ -12,8 +15,27 @@ const ThirdContainer = ({ openDialog }) => {
       {previousProjectsData.map((project) => (
         <div key={project.title} className="previous-project">
           <img src={project.pictureLocation} alt={project.title} className="project-image" />
+          <div className="project-title">{project.title}</div>
           <div className="small-description">{project.smallDescription}</div>
-          <button onClick={() => openDialog(project)} className="view-more-btn">View More</button>
+          <button onClick={() => openDialog(
+            <>
+              <CustomCarousel items={project.pictureArray.map((imgSrc, index) => (
+                <img
+                  key={index}
+                  src={imgSrc}
+                  alt={`Project Image ${index + 1}`}
+                  className="responsive-carousel-image"
+                />
+              ))} />
+              <ul className="project-description-list">
+                {Object.entries(project.largeDescription).map(([key, value]) => (
+                  <li key={key}>
+                    <strong>{key}:</strong> {value}
+                  </li>
+                ))}
+              </ul>
+            </>
+          )} className="view-more-btn">View More</button>
         </div>
       ))}
 

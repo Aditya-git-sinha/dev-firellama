@@ -5,25 +5,29 @@
     right: 0;
     bottom: 0;
     display: flex;
-    align-items: center;
+    align-items: start; /* Aligns the dialog to the top */
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.6);
+    padding-top: 50px; /* Pushes dialog down from the top */
+    overflow-y: auto; /* Allows scrolling for the entire overlay if needed */
     z-index: 1000;
-}
-
-.dialog-content {
+  }
+  
+  .dialog-content {
     position: relative;
     background: #fff;
     padding: 20px;
-    width: 50%;
-    max-width: 600px;
+    padding-top: 60px; /* Space for the close button */
+    width: auto;
+    max-width: 80vw;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
-    z-index: 1001;
-}
-
-.close-btn {
-    padding: 5px 15px;
+    max-height: 80vh; /* Limits the dialog's height */
+    overflow-y: auto; /* Allows scrolling within the dialog */
+  }
+  
+  .close-btn {
+    padding: 0 15px;
     background-color: #dc3545;
     color: white;
     border: none;
@@ -33,19 +37,5 @@
     cursor: pointer;
     font-size: 16px;
     border-radius: 5px;
-}
-
-/* Responsive design adjustments */
-@media (max-width: 768px) {
-    .dialog-content {
-        width: 75%;
-        padding: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .dialog-content {
-        width: 90%;
-        padding: 10px;
-    }
-}
+  }
+  
