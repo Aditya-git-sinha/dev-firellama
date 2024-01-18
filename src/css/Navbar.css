@@ -7,12 +7,13 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.1); 
     color: black;
     z-index: 1000;
     padding: 0 1rem;
     box-sizing: border-box;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2); /* Simple shadow for elegance */
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    /* Simple shadow for elegance */
 }
 
 .logo {
@@ -101,38 +102,59 @@
 
 @media (max-width: 768px) {
 
-    .navbar-menu.is-active,
-    .navbar-menu {
+    .navbar-menu,
+    .navbar-menu.is-active {
         flex-direction: column;
-        align-items: flex-end; /* Aligns child elements to the right */
-        position: fixed; /* Fixed position to stay in place when scrolling */
-        top: 60px; /* Positioned right below the top bar */
+        align-items: flex-end;
+        /* This aligns the container's children to the right */
+        position: fixed;
+        top: 60px;
+        /* Positioned right below the top bar */
         right: 0;
         max-height: 400px;
-        background-color: #ffffff; /* Solid background for readability */
-        width: 100%; /* Full width */
-        height: calc(100vh - 60px); /* Fills the remaining viewport height */
-        overflow-y: scroll; /* Enable scrollbar if content overflows */
+        background-color: rgba(0, 0, 0, 0.1); 
+        width: 100%;
+        /* Full width */
+        height: calc(100vh - 60px);
+        /* Fills the remaining viewport height */
+        overflow-y: scroll;
         transition: transform 0.3s ease;
         padding: 20px;
-        box-shadow: -2px 0 4px rgba(0,0,0,0.2); /* Optional shadow for depth */
-        z-index: 1001; /* Ensures navbar is above other page content */
-        transform: translateX(100%); /* Hide off-screen initially */
+        box-shadow: -2px 0 4px rgba(0, 0, 0, 0.2);
+        z-index: 1001;
+        transform: translateX(100%);
+        /* Starts off-screen */
     }
 
     .navbar-menu.is-active {
-        transform: translateX(0); /* Bring into view */
+        transform: translateX(0);
+        /* Animates into view */
     }
 
     .navbar-menu .nav-link {
-        display: block; /* Stack the links */
-        margin: 10px auto; /* Adequate margin, centered */
-        width: 90%; /* Slightly less than full width for padding */
-        box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        display: inline-block;
+        /* Stack the links */
+        text-align: right;
+        /* Ensures text within the link is aligned to the right */
+        margin: 10px 0;
+        /* Vertical margin only */
+        box-sizing: border-box;
+        background-color: black;
+        /* Background color for non-hover state */
+        color: white;
+        /* Text color for non-hover state */
+    }
+
+    .nav-link:hover,
+    .nav-link:focus {
+        background-color: white !important;
+        /* Black background on hover/focus */
+        color: black !important;
+        /* White text on hover/focus */
     }
 
     .navbar-toggle {
-        display: inline-flex; /* Show the toggle button */
-        z-index: 1002; /* Ensures it is above the navbar-menu when active */
+        display: inline-flex;
+        z-index: 1002;
     }
 }
