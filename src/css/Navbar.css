@@ -8,11 +8,11 @@
     top: 0;
     left: 0;
     background-color: transparent;
-    /* Setting navbar background to transparent */
     color: black;
     z-index: 1000;
     padding: 0 1rem;
     box-sizing: border-box;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2); /* Simple shadow for elegance */
 }
 
 .logo {
@@ -99,55 +99,40 @@
     /* Icon color for hover and active states */
 }
 
-/* Mobile and Menu Animation */
-
 @media (max-width: 768px) {
 
     .navbar-menu.is-active,
     .navbar-menu {
-        display: flex;
         flex-direction: column;
-        align-items: flex-end;
-        /* Aligns child elements to the right */
-        position: fixed;
-        top: 60px;
+        align-items: flex-end; /* Aligns child elements to the right */
+        position: fixed; /* Fixed position to stay in place when scrolling */
+        top: 60px; /* Positioned right below the top bar */
         right: 0;
-        background-color: transparent;
-        /* Transparent background */
-        width: auto;
-        /* Width is set to be as wide as the content */
-        min-width: 50%;
-        /* Minimum width to prevent too narrow appearance */
-        max-width: 100%;
-        /* Maximum width to prevent overflow */
-        transform: translateX(100%);
+        max-height: 400px;
+        background-color: #ffffff; /* Solid background for readability */
+        width: 100%; /* Full width */
+        height: calc(100vh - 60px); /* Fills the remaining viewport height */
+        overflow-y: scroll; /* Enable scrollbar if content overflows */
         transition: transform 0.3s ease;
-        text-align: right;
-        padding-right: 20px;
-        /* Padding to ensure content doesn't touch screen edge */
-        max-height: 100vh;
-        /* Set max height to 100% of the viewport height */
-        overflow-y: auto;
-        /* Enable vertical scrolling */
-        padding-bottom: 1rem;
-        /* Add some padding at the bottom for better spacing */
-        /* Make sure other properties like `position`, `top`, `right`, `background-color`
-           are correctly set as your design needs */
-    }
-
-    .navbar-menu .nav-link {
-        display: block;
-        margin: 10px 0;
-        width: fit-content;
-        /* Width should fit the content of the link */
+        padding: 20px;
+        box-shadow: -2px 0 4px rgba(0,0,0,0.2); /* Optional shadow for depth */
+        z-index: 1001; /* Ensures navbar is above other page content */
+        transform: translateX(100%); /* Hide off-screen initially */
     }
 
     .navbar-menu.is-active {
-        transform: translateX(0);
+        transform: translateX(0); /* Bring into view */
+    }
+
+    .navbar-menu .nav-link {
+        display: block; /* Stack the links */
+        margin: 10px auto; /* Adequate margin, centered */
+        width: 90%; /* Slightly less than full width for padding */
+        box-sizing: border-box; /* Include padding and border in the element's total width and height */
     }
 
     .navbar-toggle {
-        display: inline-flex;
-        /* Show the toggle button on small screens */
+        display: inline-flex; /* Show the toggle button */
+        z-index: 1002; /* Ensures it is above the navbar-menu when active */
     }
 }
