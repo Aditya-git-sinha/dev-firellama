@@ -6,7 +6,6 @@ import SecondContainer from './components/SecondContainer';
 import ThirdContainer from './components/ThirdContainer';
 import Dialog from './components/Dialog';
 import ServicesContainer from './components/ServicesContainer';
-import ContactUs from './components/ContactUs';
 
 function App() {
   const [child, setChild] = useState(null);
@@ -22,7 +21,7 @@ function App() {
   return (
     <div className="App">
       <Navbar openDialog={openDialog} />
-      <TopContainer />
+      <TopContainer openDialog={openDialog} />
       <SecondContainer />
       <ServicesContainer />
       <ThirdContainer openDialog={openDialog} />

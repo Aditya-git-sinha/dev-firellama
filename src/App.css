@@ -2,7 +2,8 @@
   text-align: center;
 }
 
-tml, body {
+html,
+body {
   margin: 0;
   height: 100%;
 }
@@ -12,6 +13,7 @@ body {
   flex-direction: column;
 }
 
-body > #root {
-  flex-grow: 1; /* This will make your app content grow to fill the available space, pushing the footer down. */
+body>#root {
+  flex-grow: 1;
+  /* This will make your app content grow to fill the available space, pushing the footer down. */
 }
