@@ -8,7 +8,6 @@ const OverlapingRectangles = ({ header, technologies, backgroundColor, imageSrc 
   return (
     <div className="container">
       <div className="big-rectangle" style={{ backgroundImage: `url(${imageSrc})` }}>
-        {/* Now big rectangle will display the image */}
       </div>
       <div className="overlaping-rectangle" style={{ backgroundColor: backgroundColor }}>
         <h2 style={{ color: 'white' }}>{header}</h2>

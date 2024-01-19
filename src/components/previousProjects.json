@@ -1,147 +1,44 @@
 [
     {
-        "title": "Project One",
-        "pictureLocation": "/path/to/picture1.jpg",
-        "smallDescription": "A brief summary of Project One.",
-        "largeDescription": "An extensive explanation about Project One with all details."
+        "title": "Sales Management Portal",
+        "pictureLocation": "https://aditya113141.github.io/assets/salesportalmockup.png",
+        "smallDescription": "Track your sales with our Sales Management Portal, featuring individualized performance tracking, automated referrals, and sleek analytics.",
+        "pictureArray": [
+            "https://aditya113141.github.io/assets/admin.png",
+            "https://aditya113141.github.io/assets/admin_1.png",
+            "https://aditya113141.github.io/assets/login.png",
+            "https://aditya113141.github.io/assets/emp.png",
+            "https://aditya113141.github.io/assets/emp_1.png"
+        ],
+        "largeDescription": {
+            "Sales Management Excellence": "Our Sales Development Portal is an internal tool crafted for unparalleled sales team management.",
+            "Individualized Performance Tracking": "Each sales team member is assigned a unique ID linked to an exclusive referral code, allowing them to meticulously track their sales performance, earnings, and customer onboarding.",
+            "Administrator Insights": "Admins, accessible only to senior managers, gain comprehensive insights into the entire sales team's performance, facilitating data-driven compensation decisions",
+            "Referral System for Increased Sales": "The platform includes a customer referral system, empowering sales staff to boost their sales and earnings. Automated email notifications are triggered upon successful referrals.",
+            "Completion Certificates": "At the end of tenures, sales staff receives completion certificates, adding a touch of recognition to their achievements.",
+            "Intuitive User Interface": "Developed with the MERN stack and Next.js, the portal boasts a sleek and intuitive user interface for seamless navigation.",
+            "Privacy-First Design": "The design prioritizes privacy, ensuring that sales staff can only access their individual progress, while administrators enjoy access to comprehensive team analytics.",
+            "Analytical Depth": "Beyond performance metrics, the portal features sales history tables with customizable filters, providing in-depth analytical insights."
+        }
     },
     {
-        "title": "Project Two",
-        "pictureLocation": "/path/to/picture2.jpg",
-        "smallDescription": "A brief summary of Project Two.",
-        "largeDescription": "An extensive explanation about Project Two with all details."
-    },
-    {
-        "title": "Project One",
-        "pictureLocation": "/path/to/picture1.jpg",
-        "smallDescription": "A brief summary of Project One.",
-        "largeDescription": "An extensive explanation about Project One with all details."
-    },
-    {
-        "title": "Project Two",
-        "pictureLocation": "/path/to/picture2.jpg",
-        "smallDescription": "A brief summary of Project Two.",
-        "largeDescription": "An extensive explanation about Project Two with all details."
-    },{
-        "title": "Project One",
-        "pictureLocation": "/path/to/picture1.jpg",
-        "smallDescription": "A brief summary of Project One.",
-        "largeDescription": "An extensive explanation about Project One with all details."
-    },
-    {
-        "title": "Project Two",
-        "pictureLocation": "/path/to/picture2.jpg",
-        "smallDescription": "A brief summary of Project Two.",
-        "largeDescription": "An extensive explanation about Project Two with all details."
-    },{
-        "title": "Project One",
-        "pictureLocation": "/path/to/picture1.jpg",
-        "smallDescription": "A brief summary of Project One.",
-        "largeDescription": "An extensive explanation about Project One with all details."
-    },
-    {
-        "title": "Project Two",
-        "pictureLocation": "/path/to/picture2.jpg",
-        "smallDescription": "A brief summary of Project Two.",
-        "largeDescription": "An extensive explanation about Project Two with all details."
-    },{
-        "title": "Project One",
-        "pictureLocation": "/path/to/picture1.jpg",
-        "smallDescription": "A brief summary of Project One.",
-        "largeDescription": "An extensive explanation about Project One with all details."
-    },
-    {
-        "title": "Project Two",
-        "pictureLocation": "/path/to/picture2.jpg",
-        "smallDescription": "A brief summary of Project Two.",
-        "largeDescription": "An extensive explanation about Project Two with all details."
-    },{
-        "title": "Project One",
-        "pictureLocation": "/path/to/picture1.jpg",
-        "smallDescription": "A brief summary of Project One.",
-        "largeDescription": "An extensive explanation about Project One with all details."
-    },
-    {
-        "title": "Project Two",
-        "pictureLocation": "/path/to/picture2.jpg",
-        "smallDescription": "A brief summary of Project Two.",
-        "largeDescription": "An extensive explanation about Project Two with all details."
-    },{
-        "title": "Project One",
-        "pictureLocation": "/path/to/picture1.jpg",
-        "smallDescription": "A brief summary of Project One.",
-        "largeDescription": "An extensive explanation about Project One with all details."
-    },
-    {
-        "title": "Project Two",
-        "pictureLocation": "/path/to/picture2.jpg",
-        "smallDescription": "A brief summary of Project Two.",
-        "largeDescription": "An extensive explanation about Project Two with all details."
-    },{
-        "title": "Project One",
-        "pictureLocation": "/path/to/picture1.jpg",
-        "smallDescription": "A brief summary of Project One.",
-        "largeDescription": "An extensive explanation about Project One with all details."
-    },
-    {
-        "title": "Project Two",
-        "pictureLocation": "/path/to/picture2.jpg",
-        "smallDescription": "A brief summary of Project Two.",
-        "largeDescription": "An extensive explanation about Project Two with all details."
-    },{
-        "title": "Project One",
-        "pictureLocation": "/path/to/picture1.jpg",
-        "smallDescription": "A brief summary of Project One.",
-        "largeDescription": "An extensive explanation about Project One with all details."
-    },
-    {
-        "title": "Project Two",
-        "pictureLocation": "/path/to/picture2.jpg",
-        "smallDescription": "A brief summary of Project Two.",
-        "largeDescription": "An extensive explanation about Project Two with all details."
-    },{
-        "title": "Project One",
-        "pictureLocation": "/path/to/picture1.jpg",
-        "smallDescription": "A brief summary of Project One.",
-        "largeDescription": "An extensive explanation about Project One with all details."
-    },
-    {
-        "title": "Project Two",
-        "pictureLocation": "/path/to/picture2.jpg",
-        "smallDescription": "A brief summary of Project Two.",
-        "largeDescription": "An extensive explanation about Project Two with all details."
-    },{
-        "title": "Project One",
-        "pictureLocation": "/path/to/picture1.jpg",
-        "smallDescription": "A brief summary of Project One.",
-        "largeDescription": "An extensive explanation about Project One with all details."
-    },
-    {
-        "title": "Project Two",
-        "pictureLocation": "/path/to/picture2.jpg",
-        "smallDescription": "A brief summary of Project Two.",
-        "largeDescription": "An extensive explanation about Project Two with all details."
-    },{
-        "title": "Project One",
-        "pictureLocation": "/path/to/picture1.jpg",
-        "smallDescription": "A brief summary of Project One.",
-        "largeDescription": "An extensive explanation about Project One with all details."
-    },
-    {
-        "title": "Project Two",
-        "pictureLocation": "/path/to/picture2.jpg",
-        "smallDescription": "A brief summary of Project Two.",
-        "largeDescription": "An extensive explanation about Project Two with all details."
-    },{
-        "title": "Project One",
-        "pictureLocation": "/path/to/picture1.jpg",
-        "smallDescription": "A brief summary of Project One.",
-        "largeDescription": "An extensive explanation about Project One with all details."
-    },
-    {
-        "title": "Project Two",
-        "pictureLocation": "/path/to/picture2.jpg",
-        "smallDescription": "A brief summary of Project Two.",
-        "largeDescription": "An extensive explanation about Project Two with all details."
+        "title": "Table Detection Models",
+        "pictureLocation": "https://aditya113141.github.io/assets/tableDetectionmockup.png",
+        "smallDescription": "Extract table Data from your documents with our SOTA models Easily",
+        "pictureArray": [
+            "https://aditya113141.github.io/assets/sample.png",
+            "https://aditya113141.github.io/assets/table_result.jpg",
+            "https://aditya113141.github.io/assets/ocr_result.jpg",
+            "https://aditya113141.github.io/assets/tables_excel.png"
+        ],
+        "largeDescription": {
+            "Advanced Table Extraction": "Our Table Detection Models leverage state-of-the-art algorithms for precise and efficient extraction of tabular data from your documents.",
+            "Tailored for Diverse Documents": "Whether it's invoices, reports, or any other document, our models are trained to recognize and extract tables from a wide range of document types.",
+            "Streamlined Data Retrieval": "Experience seamless data retrieval as our models efficiently process and extract tables, saving you valuable time and effort.",
+            "Model Performance Insights": "Access to insights on the performance of the table detection models, allowing for informed decision-making.",
+            "Enhanced User Experience": "Our API is easy to understand and use.",
+            "Privacy-First Design": "We prioritize data privacy, ensuring that the extraction process adheres to strict privacy standards, with users having access only to their specific data.",
+            "Scalable and Efficient": "Built on robust technology, our Table Detection Models are designed to scale efficiently, handling large volumes of documents with ease."
+        }
     }
 ]

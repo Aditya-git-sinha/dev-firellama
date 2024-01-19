@@ -5,7 +5,7 @@
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 20px;
-  background-color: #f5f5f5;
+  background-color: #ffffff;
   margin: 10px 10px 20px;
   padding-top: 2%;
 }
@@ -33,67 +33,100 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   display: flex;
-  flex-direction: column; /* Stack children vertically */
-  align-items: center; /* Center children horizontally */
-  justify-content: flex-start; /* Align children to the start of the flex container */
-  gap: 1rem; /* Adjust as necessary */
-  overflow: hidden; /* Ensures that content does not overflow */
+  flex-direction: column;
+  /* Stack children vertically */
+  align-items: center;
+  /* Center children horizontally */
+  justify-content: flex-start;
+  /* Align children to the start of the flex container */
+  gap: 1rem;
+  /* Adjust as necessary */
+  overflow: hidden;
+  /* Ensures that content does not overflow */
 }
 
-.responsive-carousel-image{
-  max-width: 100%;  /* Ensures the image is not larger than its container */
-  max-height: 500px; /* Adjust the value according to what you deem fit for your design */
-  height: auto;  /* Preserve the aspect ratio of the image. */
-  display: block; /* Ensures the image takes its own line within the carousel-item. */
-  margin: auto; /* Centers the image in the carousel item if the width is less than 100%. */
+.responsive-carousel-image {
+  max-width: 100%;
+  /* Ensures the image is not larger than its container */
+  max-height: 500px;
+  /* Adjust the value according to what you deem fit for your design */
+  height: auto;
+  /* Preserve the aspect ratio of the image. */
+  display: block;
+  /* Ensures the image takes its own line within the carousel-item. */
+  margin: auto;
+  /* Centers the image in the carousel item if the width is less than 100%. */
 }
 
 /* Add this to your existing stylesheet */
 .project-description-list {
-  list-style-type: disc; /* Or you can choose another style such as 'circle' or 'square' */
-  padding-left: 20px; /* Gives some space inside the list */
-  margin-top: 20px; /* Additional space above the list */
-  margin-bottom: 20px; /* Additional space below the list */
+  list-style-type: disc;
+  /* Or you can choose another style such as 'circle' or 'square' */
+  padding-left: 20px;
+  /* Gives some space inside the list */
+  margin-top: 20px;
+  /* Additional space above the list */
+  margin-bottom: 20px;
+  /* Additional space below the list */
 }
 
 .project-description-list li {
-  margin-bottom: 10px; /* Space between list items */
-  font-size: 16px; /* Adjust the font size as needed */
-  line-height: 1.6; /* Makes it more readable by increasing line height */
+  margin-bottom: 10px;
+  /* Space between list items */
+  font-size: 16px;
+  /* Adjust the font size as needed */
+  line-height: 1.6;
+  /* Makes it more readable by increasing line height */
 }
 
 .project-description-list li strong {
-  font-weight: bold; /* Increases the font-weight for the key */
-  margin-right: 5px; /* Adds some space between the key and the colon */
+  font-weight: bold;
+  /* Increases the font-weight for the key */
+  margin-right: 5px;
+  /* Adds some space between the key and the colon */
 }
 
 .project-description-list li::before {
-  content: '• '; /* Adds a bullet before each list item */
-  color: #333; /* Bullet color, can match your design */
-  font-size: 20px; /* Bullet size */
-  margin-left: -20px; /* Aligns bullets properly with the text */
-  position: absolute; /* Positions the bullet absolutely within the li element */
+  content: '• ';
+  /* Adds a bullet before each list item */
+  color: #333;
+  /* Bullet color, can match your design */
+  font-size: 20px;
+  /* Bullet size */
+  margin-left: -20px;
+  /* Aligns bullets properly with the text */
+  position: absolute;
+  /* Positions the bullet absolutely within the li element */
 }
 
 .project-title {
-  font-size: 16px; /* Example size, adjust as needed */
-  font-weight: bold; /* Make the title bold */
-  color: #333; /* Dark color for the title */
-  margin-top: 10px; /* Space between the image and the title */
-  text-align: center; /* Center the title below the image */
+  font-size: 16px;
+  /* Example size, adjust as needed */
+  font-weight: bold;
+  /* Make the title bold */
+  color: #333;
+  /* Dark color for the title */
+  margin-top: 10px;
+  /* Space between the image and the title */
+  text-align: center;
+  /* Center the title below the image */
 }
 
 .project-image {
-  width: 100%; /* Ensures the image is contained within the parent */
-  height: auto; /* Keeps the aspect ratio of the image */
+  width: 100%;
+  /* Ensures the image is contained within the parent */
+  height: auto;
+  /* Keeps the aspect ratio of the image */
   margin-bottom: 10px;
 }
 
 .small-description {
   font-size: 14px;
   color: #666;
-  text-align: center; /* Center the text if needed */
-  padding: 0 10px; /* Adds padding inside the description area */
+  text-align: center;
+  /* Center the text if needed */
+  padding: 0 10px;
+  /* Adds padding inside the description area */
 }
 
 .view-more-btn {
@@ -102,7 +135,8 @@
   color: white;
   border: none;
   cursor: pointer;
-  margin-top: auto; /* Pushes the button to the bottom of the flex container */
+  margin-top: auto;
+  /* Pushes the button to the bottom of the flex container */
 }
 
 .megsoft-product {
@@ -129,6 +163,13 @@
 .megsoft-text {
   text-align: left;
   padding-left: 2rem;
+  word-break: true;
+}
+
+.megsoft-text h1,
+.megsoft-text .description-background p {
+  word-break: break-word;
+  hyphens: auto;
 }
 
 .megsoft-product h1,
@@ -164,9 +205,15 @@
 
 /* Updated styles for the Coming Soon button to match the provided styles */
 .btn-2 {
+  word-break: break-word;
+  white-space: normal;
+  /* Allows text to wrap instead of staying on a single line */
+  overflow: hidden;
+  /* Prevents content from overflowing */
+  hyphens: auto;
   outline: none;
   display: block;
-  width: 15rem;
+  width: 15vw;
   height: 5rem;
   border: none;
   color: #fff;
@@ -176,7 +223,8 @@
   margin: 0 auto;
   margin-bottom: 0.5rem;
   text-transform: capitalize;
-  font-size: 1.6rem;
+  font-size: 2vw;
+  max-width: 90vw;
   background: var(--grad-liner);
   /* Fallback for browsers that do not support CSS variables */
   background: linear-gradient(86deg, #4776e6 0%, #8e54e9 100%);
@@ -196,9 +244,21 @@
 .section-heading {
   width: 100%;
   text-align: center;
-  font-size: 2rem; /* Starting font size for larger screens */
-  margin: 2rem 0 1.5rem; /* Add some space above and below the heading */
-  color: #333; /* An example color - adjust as needed */
+  font-size: 2rem;
+  /* Starting font size for larger screens */
+  margin: 2rem 0 1.5rem;
+  /* Add some space above and below the heading */
+  color: #333;
+  /* An example color - adjust as needed */
+}
+
+.laptop-image {
+  /* Example styles, adjust as needed */
+  width: 30vw;
+  /* Alternatively, use a specific width like 'width: 300px;' */
+  height: auto;
+  /* Maintain aspect ratio */
+  /* Further styling if required */
 }
 
 
@@ -238,6 +298,22 @@
     padding-top: 1rem;
   }
 
+  .btn-2 {
+    width: 50vw;
+    /* Make the button width dependent on its content size */
+    padding: 0.1rem 1rem;
+    /* Adjust the padding if necessary */
+    font-size: 5vw;
+    /* Reduce the font size on smaller screens if needed */
+    /* ... other responsive styles for .btn-2 ... */
+  }
+
+  .megsoft-text h1,
+  .megsoft-text .description-background p {
+    /* Apply the word break for smaller screens */
+    word-break: break-word;
+  }
+
   .megsoft-description {
     text-align: center;
   }
@@ -245,13 +321,30 @@
   .coming-soon {
     margin-top: 10px;
   }
+
+  .laptop-image {
+    /* Example styles, adjust as needed */
+    width: 80vw;
+    /* Alternatively, use a specific width like 'width: 300px;' */
+    height: auto;
+    /* Maintain aspect ratio */
+    /* Further styling if required */
+  }
 }
 
 /* Existing media query for mobile */
 @media (max-width: 600px) {
   .previous-project {
-    flex-basis: 100%; /* Take full width on smaller screens */
-    margin: 10px 0; /* Adjust margin specifically for mobile */
+    flex-basis: 100%;
+    /* Take full width on smaller screens */
+    margin: 10px 0;
+    /* Adjust margin specifically for mobile */
+  }
+}
+
+@media (max-width: 135px) {
+  .section-heading {
+    font-size: 15vw !important;
   }
 }
 

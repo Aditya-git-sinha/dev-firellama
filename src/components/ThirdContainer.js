@@ -1,17 +1,17 @@
 import React from 'react';
-import SmallLaptopComponent from './SmallLaptopDisplay';
 import previousProjectsData from './previousProjects.json';
 import megsoft from '../assets/megsoft.png';
 import '../css/ThirdContainer.css';
 import CustomCarousel from './Carousel';
 
-
-
 const ThirdContainer = ({ openDialog }) => {
-  return (
-    <div className="third-container">
-      <h2 className="section-heading">Previous Projects</h2>
 
+  const openMegsoft = () => {
+    window.open('https://megsoft.firellama.app', '_blank', 'noopener,noreferrer');
+  }
+  return (
+    <div className="third-container" id='project-container'>
+      <h2 className="section-heading">Previous Projects</h2>
       {previousProjectsData.map((project) => (
         <div key={project.title} className="previous-project">
           <img src={project.pictureLocation} alt={project.title} className="project-image" />
@@ -38,11 +38,9 @@ const ThirdContainer = ({ openDialog }) => {
           )} className="view-more-btn">View More</button>
         </div>
       ))}
-
       <h2 className="section-heading">Upcoming Projects</h2>
-
       <div className="project-box megsoft-product">
-        <SmallLaptopComponent iframeSrc={megsoft} />
+        <img src={megsoft} alt="MegSoft - Business Accounting Software" className="laptop-image" />
         <div className="megsoft-text">
           <h1>MegSoft - Business Accounting Software</h1>
           <div className="description-background">
@@ -50,7 +48,8 @@ const ThirdContainer = ({ openDialog }) => {
           </div>
           <button
             name="submit"
-            className="btn-2" // Updated class name to match the style provided
+            className="btn-2"
+            onClick={openMegsoft}
           >
             Coming Soon
           </button>

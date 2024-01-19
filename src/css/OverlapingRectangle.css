@@ -36,7 +36,7 @@
 
 
 .technologies-layout {
-  
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -47,25 +47,29 @@
 .technology-item {
   margin: 5px;
   border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   padding: 5px 10px;
 }
 
-.technology-item span{
+.technology-item span {
   font-size: clamp(0rem, 1rem, 1.5rem);
 }
 
 @media (max-width: 990px) {
   .big-rectangle {
-    display: none; /* This will hide the big-rectangle when the viewport width is below 990px */
+    display: none;
+    /* This will hide the big-rectangle when the viewport width is below 990px */
   }
 
   .overlaping-rectangle {
-    position: static; /* Resets the position */
-    width: 100%; /* Takes the full width of the container */
+    position: static;
+    /* Resets the position */
+    width: 100%;
+    /* Takes the full width of the container */
     right: 0;
     bottom: 0;
-    margin-top: 20px; /* Optional: if you want some space between the rectangles */
+    margin-top: 20px;
+    /* Optional: if you want some space between the rectangles */
   }
 
   /* If you want the the overlaping-rectangle to be the same aspect ratio as the big-rectangle */
