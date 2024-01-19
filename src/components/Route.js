@@ -3,11 +3,11 @@
 // Define your route names and paths
 const Routes = {
     HOME: '/',
-    ABOUT: '/about',
     CONTACT: '/contact',
-    ALOO: '/',
-    AMAN: '/about',
-    CONTA: '/contact',
+    SERVICES: '/services',
+    PROJECTS: '/projects',
+
+
     // Add other routes as needed
 };
 
