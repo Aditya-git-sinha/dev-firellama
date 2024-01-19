@@ -1,61 +1,105 @@
 .contact-form {
-    background-color: #fff;
-    max-width: 540px;
-    margin: 40px auto;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #f8f0f0;
+  max-width: 600px;
+  width: 50vw;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.contact-form h2 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  word-break: true;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: 500;
+  color: #444;
+  word-break: true;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #5cb85c;
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+  word-break: true;
+}
+
+.contact-form button:hover,
+.contact-form button:focus {
+  background-color: #4cae4c;
+}
+
+.contact-form-intro {
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+  word-break: true;
+}
+
+.contact-form-email {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contact-form-email a {
+  color: #1045f5;
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.contact-form-email a:hover,
+.contact-form-email a:focus {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px) {
+  .contact-form {
+    margin: 20px;
+    padding: 15px;
   }
-  
+
   .contact-form h2 {
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
+    font-size: 1.5rem;
+    word-break: true;
   }
-  
-  .contact-form label {
-    display: block;
-    margin-bottom: .5rem;
-    font-weight: 500;
-    color: #444;
+
+  /* Adjust the intro text size for smaller screens if necessary */
+  .contact-form-intro {
+    font-size: 0.9rem;
+    word-break: true;
   }
-  
+
+  /* Ensure inputs and buttons take the full width and have proper margin */
   .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    padding: 10px 15px;
-    margin-bottom: 15px; 
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box; 
-  }
-  
+  .contact-form textarea,
   .contact-form button {
     width: 100%;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    background-color: #5cb85c;
-    color: #ffffff;
-    font-size: 1rem;
-    cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s;
+    margin: 10px 0;
   }
-  
-  .contact-form button:hover,
-  .contact-form button:focus {
-    background-color: #4cae4c;
-  }
-  
-  @media only screen and (max-width: 768px) {
-    .contact-form {
-      margin: 20px;
-      padding: 15px;
-    }
-    .contact-form h2 {
-      font-size: 1.5rem;
-    }
-  }
-  
+
+}
