@@ -149,7 +149,7 @@ const DustParticles = (props) => {
     };
   }, [props.encodedImageData]); // Only re-run the effect if new imageData comes in
 
-  return <canvas ref={canvasRef} style={canvasStyles} />;
+  return <canvas ref={canvasRef} style={canvasStyles} className = "MyCanvas"/>;
 };
 
 export default DustParticles;
