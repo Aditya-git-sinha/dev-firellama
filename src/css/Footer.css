@@ -71,15 +71,14 @@ a:hover {
 }
 
 .footer-distributed .footer-left,
-.footer-distributed .footer-center-left,
-.footer-distributed .footer-center-right,
+.footer-distributed .footer-center,
 .footer-distributed .footer-right {
     display: inline-block;
     vertical-align: top;
 }
 
 .footer-distributed .footer-left {
-    width: 25%;
+    width: 35%;
 }
 
 .footer-distributed .footer-left .logo-text {
@@ -123,38 +122,16 @@ a:hover {
     margin: 0;
 }
 
-.footer-distributed .footer-center-left {
-    width: 25%;
-}
-
-.footer-distributed .footer-center-right {
-    width: 25%;
+.footer-distributed .footer-center {
+    width: 35%;
     vertical-align: middle;
 }
 
-.footer-distributed .footer-center-right div {
+.footer-distributed .footer-center div {
     margin-bottom: 15px;
 }
 
-/*
-.footer-distributed .footer-center-right i {
-    color: #000000;
-    font-size: 25px;
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 42px;
-    margin: 10px 15px;
-    vertical-align: middle;
-} */
-/*
-.footer-distributed .footer-center-right i.fa-envelope {
-    font-size: 17px;
-    line-height: 38px;
-} */
-
-.footer-distributed .footer-center-right p {
+.footer-distributed .footer-center p {
     display: inline-block;
     color: #000000;
     /* Black text */
@@ -162,14 +139,7 @@ a:hover {
     margin: 0;
 }
 
-/*
-.footer-distributed .footer-center-right p span {
-    display: block;
-    font-size: 14px;
-    line-height: 2;
-}*/
-
-.footer-distributed .footer-center-right p a {
+.footer-distributed .footer-center p a {
     color: #4d4d4d;
     /* Darker grey for better contrast */
     text-decoration: none;
@@ -239,7 +209,7 @@ a:hover {
     transition: max-width 0.2s ease-out;
 }
 
-.footer-distributed:first-child{
+.footer-distributed:first-child {
     margin-top: 0;
 }
 
@@ -251,8 +221,7 @@ a:hover {
     }
 
     .footer-distributed .footer-left,
-    .footer-distributed .footer-center-left,
-    .footer-distributed .footer-center-right,
+    .footer-distributed .footer-center,
     .footer-distributed .footer-right {
         display: block;
         width: 100%;
@@ -262,33 +231,15 @@ a:hover {
 
     .footer-distributed .footer-company-name,
     .footer-distributed .footer-company-social,
-    .footer-distributed .footer-center-right p,
+    .footer-distributed .footer-center p,
     .footer-distributed .footer-links a,
-    .footer-distributed .footer-company-social span,
-    .footer-distributed .footer-center-left ul li a {
+    .footer-distributed .footer-company-social span {
         font-size: 12px !important;
     }
 
-    .footer-center-right>div {
+    .footer-center>div {
         display: flex;
         justify-content: center;
-    }
-
-    .footer-distributed .footer-center-left ul {
-        padding-left: 0;
-        /* Reset default padding */
-        text-align: center;
-        width: 100%;
-        /* Ensure the full width is available for centering */
-    }
-
-    .footer-distributed .footer-center-left li {
-        display: block;
-        /* Stack items vertically */
-        margin-left: auto;
-        /* Center block elements horizontally */
-        margin-right: auto;
-        /* Add any additional spacing between list items if needed */
     }
 
     .footer-distributed h3 {
@@ -307,15 +258,14 @@ a:hover {
 
     .footer-distributed .footer-left,
     .footer-distributed .footer-right,
-    .footer-distributed .footer-center-left .footer-distributed .footer-center-right {
+    .footer-distributed .footer-center {
         width: auto;
     }
 
-    .footer-distributed .footer-center-right p,
+    .footer-distributed .footer-center p,
     .footer-distributed .footer-company-name,
     .footer-distributed .footer-links a,
-    .footer-distributed .footer-company-social span,
-    .footer-distributed .footer-center-left ul li a {
+    .footer-distributed .footer-company-social span {
         font-size: 10px !important;
     }
 
@@ -333,34 +283,32 @@ a:hover {
 
     .footer-distributed,
     .footer-distributed .footer-left,
-    .footer-distributed .footer-center-right p,
+    .footer-distributed .footer-center p,
     .footer-distributed .footer-right,
     .footer-distributed .footer-company-name,
     .footer-distributed .footer-links a,
     .footer-distributed .footer-company-social,
     .footer-distributed .footer-icons a,
     .footer-distributed h3,
-    .footer-distributed h3 span,
-    .footer-distributed .footer-center-left ul li a {
+    .footer-distributed h3 span {
         font-size: 8px !important;
         line-height: 10px;
     }
 
-    .footer-distributed .footer-center-right i,
+    .footer-distributed .footer-center i,
     .footer-distributed .footer-icons a {
         width: 15px;
         height: 15px;
         line-height: 15px;
     }
 
-    .footer-distributed .footer-center-right p,
+    .footer-distributed .footer-center p,
     .footer-distributed .footer-links a {
         white-space: normal;
     }
 
     .footer-distributed .footer-company-name,
-    .footer-distributed .footer-center-left,
-    .footer-distributed .footer-center-right,
+    .footer-distributed .footer-center,
     .footer-distributed .footer-right {
         overflow-x: auto;
     }

@@ -4,22 +4,6 @@ import myLogo from '../assets/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
-import Routes from './Route';
-import { capitalizeWords } from './Utility';
-
-// TODO : Make the copyright footer overflow proof.
-
-const NavigationList = () => {
-    return (
-        <ul>
-            {Object.entries(Routes).map(([key, value]) => (
-                <li key={key}>
-                    <a href={value}>{capitalizeWords(key)}</a>
-                </li>
-            ))}
-        </ul>
-    );
-};
 
 const MyIcon = ({ icon, text, href, color = 'black', size = '2x' }) => (
     <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -39,15 +23,9 @@ function Footer() {
                     <h3>
                         <img src={myLogo} alt="Company Logo" className="footer-logo" />
                     </h3>
-                    <p className="logo-text">Simplify Succeed </p>
+                    <p className="logo-text">Simplify. Succeed. </p>
                 </div>
-                <div className="footer-center-left">
-                    <h3>Quick Links</h3>
-                    <NavigationList />
-                </div>
-                <div className="footer-center-right">
-                    <MyIcon icon={faMapMarkerAlt} text="Vadodara, Gujarat, India" size='2x' color='red' />
-                    <MyIcon icon={faEnvelope} text="Reach Out on Email" href="mailto:aditya113141@firellama.app" color='blue' />
+                <div className="footer-center">
                     <MyIcon icon={faMapMarkerAlt} text="Vadodara, Gujarat, India" size='2x' color='red' />
                     <MyIcon icon={faEnvelope} text="Reach Out on Email" href="mailto:aditya113141@firellama.app" color='blue' />
                 </div>
@@ -67,7 +45,7 @@ function Footer() {
             </footer>
             <footer className="footer-copyright">
                 <div className="copyright-text">
-                    <p>Copyright Text</p>
+                    <p>© 2024 FireLLama Technology Pvt. Ltd. All rights reserved.</p>
                 </div>
             </footer>
         </div>
