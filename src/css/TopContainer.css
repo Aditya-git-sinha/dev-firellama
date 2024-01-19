@@ -1,50 +1,173 @@
-/* TopContainer.css */
-
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 .top-container {
   position: relative;
   background-color: #F8F8F8;
-  /* Off-white color */
-  text-align: center;
-  /* Center text horizontally */
-  padding: 50px 20px;
-  /* Some padding for breathing space */
+  /* Off-white background */
+  display: flex;
+  /* Use flexbox for layout */
+  align-items: center;
+  /* Center items vertically */
+  justify-content: space-between;
+  /* Space out header and image */
+  padding: 1px 30px;
+  /* Padding around the container */
   overflow: hidden;
-  /* Ensures bubbles don't overflow container */
-  /* Add further styling for desktop/mobile responsiveness if necessary */
+  /* Prevents any child elements from going outside the bounds */
+}
+
+.content-container {
+  display: flex;
+  /* Enables flexbox layout within the container */
+  align-items: center;
+  /* Center items vertically */
+  justify-content: space-around;
+  /* Space out the left and right elements */
+  width: 100%;
+  /* Ensure the container spans the full width */
+  z-index: 2
 }
 
 .business-tagline {
-  color: red;
-  /* Tagline in red color */
-  font-family: 'Pacifico', cursive;
-  /* Using Pacifico from Google Fonts */
-  font-size: 48px;
-  /* Big fonts for attention */
-  margin: 0;
-  /* Remove default margin */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* Align items to the start (left) */
+}
+
+.header-shine {
+  font-size: 4vw;
+  max-width: 40vw;
+  color: black;
   position: relative;
-  /* Ensure tagline is above bubbles */
-  z-index: 2;
-  /* Higher z-index to layer above the bubbles */
-  /* Add more styling such as text-shadow, letter-spacing etc. to suit your branding */
+  /* Required for absolute positioning of pseudo-elements */
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 49%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 51%);
+  background-size: 200% auto;
+  animation: text-shine 3s linear infinite;
+  text-align: center;
+  display: inline-block;
+  padding: 16px 24px;
+  padding-left: 40px;
+  /* Add additional padding to accommodate the rod */
+  border-radius: 25px;
+  background-color: #fff;
+  box-shadow: 5px 5px rgb(12, 0, 0);
+  border: 3px solid #000;
+  justify-content: space-evenly;
+  margin-bottom: 0;
 }
 
-.bubble {
+.header-shine::before {
+  content: '';
   position: absolute;
-  bottom: -150px;
-  /* Start just off-screen */
-  border-radius: 50%;
-  /* Background color is set by JavaScript; example placeholder: */
-  background-color: rgba(173, 216, 230, 0.7);
-  opacity: 0.6;
-  /* Initial opacity; can be adjusted per design */
+  left: 10px;
+  /* Position from the left, adjust as needed */
+  top: 50%;
+  transform: translateY(-50%);
+  /* Center vertically */
+  width: 10px;
+  /* Width of the rod, adjust as needed */
+  height: 80%;
+  /* Height of the rod as percentage of parent's height */
+  background: black;
+  /* Color of the rod, adjust as needed */
+  border-radius: 5px;
+  /* Slightly rounded corners for the rod */
 }
 
-@keyframes riseAndDrift {
+.vision-text {
+  color: red;
+  /* Red color for the text */
+  /* Add any necessary margins or padding */
+  margin: 20px 0;
+  /* 20px margin top and bottom for spacing */
+  font-size: 1.2rem;
+  /* You can set the size that fits the design */
+  text-align: center;
+  /* Aligns the text to the left; change as needed */
+  font-weight: bold;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 49%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 51%);
+  background-size: 200% auto;
+  border-radius: 25px;
+  background-color: #fff;
+  padding: 16px 24px;
+  box-shadow: 5px 5px rgb(255, 0, 0);
+  border: 3px solid #ff0000;
+}
+
+.contact-us-button {
+  padding: 10px 20px;
+  /* Add desired padding */
+  background-color: black;
+  /* Black background */
+  color: white;
+  /* White text */
+  border: none;
+  /* Remove default border */
+  cursor: pointer;
+  /* Change mouse pointer on hover */
+  font-size: 1rem;
+  /* Set font size */
+  text-transform: uppercase;
+  /* Optional: Uppercase text */
+  border-radius: 5px;
+  /* Rounded corners */
+  transition: background-color 0.3s ease;
+  /* Smooth transition for hover effect */
+  align-self: start;
+  /* Align button to the start if business-tagline uses align-items center or other values */
+}
+
+/* Change button background color slightly on hover */
+.contact-us-button:hover {
+  background-color: #333;
+  /* Darker shade on hover */
+}
+
+.decorative-image {
+  max-width: 30%;
+  /* Set a max-width for the image */
+  height: auto;
+  /* Maintain the aspect ratio of the image */
+}
+
+/* Add media query for mobile view */
+@media (max-width: 768px) {
+  .top-container {
+    justify-content: center;
+    /* Center the content on mobile */
+  }
+
+  .header-shine {
+    text-align: center;
+    font-size: large;
+    max-width: 50vw;
+  }
+
+  .vision-text {
+    text-align: center;
+    /* Ensures text is centered on small screens */
+    /* If you need any additional mobile-specific styles, add them here */
+  }
+
+  .decorative-image {
+    display: none;
+    /* Hide the image on mobile */
+  }
+
+  .business-tagline {
+    align-items: center;
+    /* Center the items on mobile */
+  }
+}
+
+/* Keyframes for the shine effect */
+@keyframes text-shine {
+  from {
+    background-position: left;
+  }
+
   to {
-    transform: translateY(-110vh) translateX(var(--horizontal-shift));
-    opacity: 0;
+    background-position: right;
   }
 }
