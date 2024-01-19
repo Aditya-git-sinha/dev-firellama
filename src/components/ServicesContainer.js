@@ -1,60 +1,42 @@
 import React from 'react';
 import OverlapingRectangle from './OverlapingRectangle'; // Correct the file name if necessary
-import Slider from 'react-slick'; // Make sure to import Slider from 'react-slick'
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 import '../css/ServicesContainer.css';
+import CustomCarousel from './Carousel';
 
 function ServicesContainer() {
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: true,
-        appendDots: dots => (
-            <div style={{ paddingBottom: '50px' }}>
-                <ul style={{ margin: '0px' }}> {dots} </ul>
-            </div>
-        ),
-        nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />
-    };
+  const carouselItems = [
+    <OverlapingRectangle
+      key={1}
+      header="Mobile App Development"
+      technologies={['React Native', 'Flutter', 'Cross-Platform Application', 'Native Apps', 'Mobile UI/UX Desgins']}
+      backgroundColor="#cc0066" // This should be a valid CSS color value
+      imageSrc="https://aditya113141.github.io/assets/mobile.png"
+    />,
+    <OverlapingRectangle
+      key={2}
+      header="Web App Development"
+      technologies={['React', 'Node.js', 'MongoDB', 'Express.js', 'Next.js', 'NoSQL', 'MySQL', 'Sqlite']}
+      backgroundColor="#ff8000" // This should be a valid CSS color value
+      imageSrc="https://aditya113141.github.io/assets/web.png"
+    />,
+    <OverlapingRectangle
+      key={3}
+      header="ML and AI Development"
+      technologies={['React', 'Node.js', 'MongoDB', 'Node.js', 'MongoDB', 'Node.js', 'MongoDB']}
+      backgroundColor="#0080ff" // This should be a valid CSS color value
+      imageSrc="https://aditya113141.github.io/assets/ai.jpg"
+    />,
 
-    function SampleNextArrow(props) {
-        const { className, style, onClick } = props;
-        return (
-            <div
-                className={className}
-                style={{ ...style, display: 'block', background: 'grey', position: 'absolute', bottom: '-50px' }}
-                onClick={onClick}
-            />
-        );
-    }
+    // ... more items
+  ];
 
-    function SamplePrevArrow(props) {
-        const { className, style, onClick } = props;
-        return (
-            <div
-                className={className}
-                style={{ ...style, display: 'block', background: 'grey', position: 'absolute', bottom: '-50px' }}
-                onClick={onClick}
-            />
-        );
-    }
 
-    return (
-        <div className="Overlaping-rectangles">
-            <Slider {...settings}>
-                <div><OverlapingRectangle /></div>
-                <div><OverlapingRectangle /></div>
-                <div><OverlapingRectangle /></div>
-                <div><OverlapingRectangle /></div>
-                {/* Add more OverlapingRectangle components as needed */}
-            </Slider>
-        </div>
-    );
+  return (
+    <div className="services" id="service-container">
+      <h2 className="section-heading">Our Services</h2>
+      <CustomCarousel items={carouselItems} />
+    </div>
+  );
 }
 
 export default ServicesContainer;

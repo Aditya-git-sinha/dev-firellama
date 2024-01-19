@@ -11,9 +11,15 @@
   position: relative;
 }
 
+.services {
+  background-color: rgba(221, 222, 218, 0.347);
+}
+
+
+
 .carousel-dots {
   position: absolute;
-  bottom: 20px; 
+  bottom: 20px;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -24,19 +30,26 @@
 .carousel-arrows {
   display: flex;
   justify-content: center;
-  padding-top: 10px; 
+  padding-top: 10px;
 }
 
-.prev-arrow, .next-arrow {
+.prev-arrow,
+.next-arrow {
   border: none;
-  background-color: #fff; 
+  background-color: #fff;
   padding: 10px 20px;
   margin: 0 10px;
   cursor: pointer;
 }
 
-.prev-arrow:hover, .next-arrow:hover {
+.prev-arrow:hover,
+.next-arrow:hover {
   background-color: #ccc;
 }
 
-/* Ensure to add any further custom styles you might need for the Carousel */
+@media (max-width: 768px) {
+  .section-heading {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+  }
+}
