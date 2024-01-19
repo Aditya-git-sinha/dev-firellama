@@ -1,6 +1,12 @@
-# Getting Started with Create React App
+#### TODO
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- Linkedin Link fix
+- Nodemailer in backend
+- deployment of app
+- Minor fixes in width below 150px
+
+
+do `npm install` after downloading
 
 ## Available Scripts
 
