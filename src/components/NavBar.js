@@ -4,7 +4,7 @@ import { faBurger } from '@fortawesome/free-solid-svg-icons';
 import '../css/Navbar.css';
 import logo from '../assets/logo.png';
 import Routes from './Route'; // Adjust path if necessary
-import { capitalizeWords } from './Utility';
+import { capitalizeWords, scrollToSection } from './Utility';
 import ContactForm from './ContactUs';
 
 function Navbar({ openDialog }) {
@@ -21,6 +21,15 @@ function Navbar({ openDialog }) {
     var choose = (path) => {
         if (path === '/contact') {
             return handleContactDialog
+        }
+        else if (path === '/services') {
+            return (e) => scrollToSection(e, 'service-container');
+        }
+        else if (path === '/') {
+            return (e) => scrollToSection(e, 'top-container');
+        }
+        else if (path === '/projects') {
+            return (e) => scrollToSection(e, 'project-container');
         }
         else return null
     }
