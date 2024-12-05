@@ -46,10 +46,9 @@ function ContactForm() {
     <div className="contact-form">
       <p className="contact-form-intro">
         Have a project idea or just a few queries? Let us know, and we will be glad to be of service to you.
-        Fill the below form, and you will be soon hearing from us.
       </p>
-      <p className="contact-form-email">Or, contact us on - <a href="mailto:aditya113141@firellama.app">aditya113141@firellama.app</a></p>
-      <h2>Contact Us</h2>
+      <p className="contact-form-email">Contact us on - <a href="mailto:aditya113141@firellama.app">aditya113141@firellama.app</a></p>
+      {/* <h2>Contact Us</h2>
       <form onSubmit={handleSubmit} noValidate>
         <div className="form-control">
           <label htmlFor="contactPerson">Contact Person *</label>
@@ -104,7 +103,7 @@ function ContactForm() {
         <div className="form-control">
           <button type="submit">Send Message</button>
         </div>
-      </form>
+      </form> */}
     </div>
   );
 }

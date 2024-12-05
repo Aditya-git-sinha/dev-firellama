@@ -8,7 +8,7 @@ import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 const MyIcon = ({ icon, text, href, color = 'black', size = '2x' }) => (
     <div style={{ display: 'flex', alignItems: 'center' }}>
         <FontAwesomeIcon icon={icon} color={color} size={size} />
-        <p style={{ marginLeft: '8px', marginBottom: '0', fontSize: '16px' }}>
+        <p style={{ marginLeft: '8px', marginBottom: '0', fontSize: '24px' }}>
             {href ? <a href={href} style={{ textDecoration: 'none', color: 'inherit' }}>{text}</a> : text}
         </p>
     </div>
@@ -27,7 +27,7 @@ function Footer() {
                 </div>
                 <div className="footer-center">
                     <MyIcon icon={faMapMarkerAlt} text="Vadodara, Gujarat, India" size='2x' color='red' />
-                    <MyIcon icon={faEnvelope} text="Reach Out on Email" href="mailto:aditya113141@firellama.app" color='blue' />
+                    <MyIcon icon={faEnvelope} text="aditya113141@firellama.app" href="mailto:aditya113141@firellama.app" color='blue' />
                 </div>
 
                 <div className="footer-right">
@@ -38,7 +38,7 @@ function Footer() {
                     <div className="footer-icons">
                         {/* <a href="https://www.facebook.com"><FontAwesomeIcon icon={faFacebookF} /></a>
                         <a href="https://www.twitter.com"><FontAwesomeIcon icon={faTwitter} /></a> */}
-                        <a href="https://www.linkedin.com"><FontAwesomeIcon icon={faLinkedinIn} /></a>
+                        <a href="https://www.linkedin.com/company/meghnasoft-firellama/"><FontAwesomeIcon icon={faLinkedinIn} /></a>
                         {/* <a href="https://www.github.com"><FontAwesomeIcon icon={faGithub} /></a> */}
                     </div>
                 </div>

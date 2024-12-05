@@ -11,7 +11,7 @@ const ThirdContainer = ({ openDialog }) => {
   }
   return (
     <div className="third-container" id='project-container'>
-      <h2 className="section-heading">Previous Projects</h2>
+      <h2 className="section-heading">Major Previous Projects</h2>
       {previousProjectsData.map((project) => (
         <div key={project.title} className="previous-project">
           <img src={project.pictureLocation} alt={project.title} className="project-image" />
@@ -38,8 +38,8 @@ const ThirdContainer = ({ openDialog }) => {
           )} className="view-more-btn">View More</button>
         </div>
       ))}
-      <h2 className="section-heading">Upcoming Projects</h2>
-      <div className="project-box megsoft-product">
+      {/* <h2 className="section-heading">Upcoming Projects</h2> */}
+      {/* <div className="project-box megsoft-product">
         <img src={megsoft} alt="MegSoft - Business Accounting Software" className="laptop-image" />
         <div className="megsoft-text">
           <h1>MegSoft - Business Accounting Software</h1>
@@ -54,7 +54,7 @@ const ThirdContainer = ({ openDialog }) => {
             Coming Soon
           </button>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
