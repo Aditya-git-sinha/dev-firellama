@@ -2,7 +2,7 @@
   "name": "dev_firellama",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://aditya-git-sinha.github.io/dev-firellama",
+  "homepage": "https:firellama.app",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-brands-svg-icons": "^6.5.1",
