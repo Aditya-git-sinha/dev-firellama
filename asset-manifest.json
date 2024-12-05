@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/dev-firellama/static/css/main.f7959b5f.css",
-    "main.js": "/dev-firellama/static/js/main.a945d629.js",
-    "static/js/787.79703048.chunk.js": "/dev-firellama/static/js/787.79703048.chunk.js",
-    "static/media/megsoft.png": "/dev-firellama/static/media/megsoft.8241d77c614360f31f2d.png",
-    "static/media/logo.png": "/dev-firellama/static/media/logo.4778ccf4424a233b1a1a.png",
-    "index.html": "/dev-firellama/index.html",
-    "main.f7959b5f.css.map": "/dev-firellama/static/css/main.f7959b5f.css.map",
-    "main.a945d629.js.map": "/dev-firellama/static/js/main.a945d629.js.map",
-    "787.79703048.chunk.js.map": "/dev-firellama/static/js/787.79703048.chunk.js.map"
+    "main.css": "/firellama.app/static/css/main.f7959b5f.css",
+    "main.js": "/firellama.app/static/js/main.c5a80bff.js",
+    "static/js/787.79703048.chunk.js": "/firellama.app/static/js/787.79703048.chunk.js",
+    "static/media/megsoft.png": "/firellama.app/static/media/megsoft.8241d77c614360f31f2d.png",
+    "static/media/logo.png": "/firellama.app/static/media/logo.4778ccf4424a233b1a1a.png",
+    "index.html": "/firellama.app/index.html",
+    "main.f7959b5f.css.map": "/firellama.app/static/css/main.f7959b5f.css.map",
+    "main.c5a80bff.js.map": "/firellama.app/static/js/main.c5a80bff.js.map",
+    "787.79703048.chunk.js.map": "/firellama.app/static/js/787.79703048.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f7959b5f.css",
-    "static/js/main.a945d629.js"
+    "static/js/main.c5a80bff.js"
   ]
 }
