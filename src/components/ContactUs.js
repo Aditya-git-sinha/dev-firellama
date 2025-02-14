@@ -31,16 +31,43 @@ function ContactForm() {
     return '';
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const validationError = validateForm();
-    if (validationError) {
-      setError(validationError);
-      return;
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+  const validationError = validateForm();
+  if (validationError) {
+    setError(validationError);
+    return;
+  }
+
+  try {
+    const response = await fetch('https://your-backend-url.onrender.com/submit-form', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+
+    const result = await response.json();
+    if (response.ok) {
+      console.log('Form submitted successfully:', result.message);
+      // Reset form or show success message
+      setFormData({
+        contactPerson: '',
+        email: '',
+        phoneNumber: '',
+        subject: '',
+        message: '',
+      });
+      setError('');
+    } else {
+      setError(result.error || 'Failed to submit form. Please try again.');
     }
-    // Proceed with form submission logic...
-    console.log('Submitted data:', formData);
-  };
+  } catch (err) {
+    console.error('Error submitting form:', err);
+    setError('An error occurred. Please try again later.');
+  }
+};
 
   return (
     <div className="contact-form">
