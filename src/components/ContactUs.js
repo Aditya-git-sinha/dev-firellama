@@ -40,7 +40,7 @@ function ContactForm() {
   }
 
   try {
-    const response = await fetch('https://your-backend-url.onrender.com/submit-form', {
+    const response = await fetch('https://contact-backend-form.onrender.com', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
